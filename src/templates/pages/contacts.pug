@@ -1,0 +1,33 @@
+extends ../template
+
+block variables
+  - var title = 'Контакты'
+
+block content
+  section.contacts.margin-block
+    .mycontainer
+      .contacts-col
+        h1.h1title Наши контакты
+        .contacts__subtitle Наша почта:
+        a.contacts__link(href="mailto:admin@beatu-guard.ru") admin@beatu-guard.ru
+      .contacts-col
+        h2.h1title Форма связи
+        form.contacts-form.general-form(action="#")
+          label.general-itemInput.general-itemInput_50
+            span Имя
+            input.general-itemInput__input(type="text" data-required placeholder="Введите ваше имя")
+          label.general-itemInput.general-itemInput_50
+            span Фамилия
+            input.general-itemInput__input(type="text" placeholder="Введите вашу фамилию")
+          label.general-itemInput.general-itemInput_50
+            span Телефон
+            input.general-itemInput__input(type="tel" data-type="tel" data-required placeholder="Введите ваш телефон")
+          label.general-itemInput.general-itemInput_50
+            span Email
+            input.general-itemInput__input(type="email" data-type="email" placeholder="Введите ваш email")
+          label.general-itemInput
+            span Ваше сообщение
+            textarea.general-itemInput__input
+          .general-bottomBlock
+            button.general__btn.btn-background(type="submit") Отправить сообщение
+

@@ -1,0 +1,81 @@
+extends ../template
+
+block variables
+  - var title = 'Карточка товара Филлер'
+
+block content
+  section.good.margin-block
+    .mycontainer
+      .good-row
+        .good__img
+          img(src="assets/images/filler1.png", alt="")
+        .good-info
+          h1.h1title Филлер PRINCESS Rich
+          .good-info__subtitle Описание
+          .good-info__text Мягкий очищающий лосьон, идеальный для подготовки введения активных веществ с помощью аппаратных процедур, микронидлинга, перед альгинатными масками
+          .good-info-row
+            a.good-info__btn.btn-background(href="#") В корзину
+            .good-info__newprice 4 900
+              span.rub__icon руб.
+
+      .good-content.tabs
+        .good-navigation
+          a.good-navigation__item.active.tabs-navigation-item(href="#tab1") Описание
+          a.good-navigation__item.tabs-navigation-item(href="#tab2") Доставка и оплата
+          a.good-navigation__item.tabs-navigation-item(href="#tab3") Отзывы
+        .good-tab.active.tabs-tab#tab1
+          .good-tab-col
+            .good-tab__title Предназначение
+            .good-tab__text 
+              p Для демакияжа и обезжиривания кожи перед аппаратными процедурами
+              p Перед микронидлингом
+              p Перед применением масок, в том числе альгинатных
+          .good-tab-col
+            .good-tab__title Преимущества
+            .good-tab__text 
+              p Гипоаллергенный
+              p Мягкая формула
+              p Не нарушает электропроводимость кожи
+              p Обладает обезжиривающим действием
+              p Может применяться как на лице и теле, а также вокруг глаз
+        .good-tab.tabs-tab#tab2
+          .good-tab-col
+            .good-tab__title Доставка и оплата
+        .good-tab.tabs-tab#tab3
+          .good-tab-reviews
+            .good-tab-reviews-item
+              .good-tab-reviews-item-info
+                .good-tab-reviews-item__rate(data-rate="5")
+                .good-tab-reviews-item__text 21.02.20
+                .good-tab-reviews-item__name Анастасия
+                .good-tab-reviews-item__text Москва
+              .good-tab-reviews-item__content Для демакияжа и обезжиривания кожи перед аппаратными процедурами. Перед микронидлингом. Гипоаллергенный. Перед применением масок, в том числе альгинатных.
+            .good-tab-reviews-item
+              .good-tab-reviews-item-info
+                .good-tab-reviews-item__rate(data-rate="3")
+                .good-tab-reviews-item__text 21.02.20
+                .good-tab-reviews-item__name Анастасия
+                .good-tab-reviews-item__text Москва
+              .good-tab-reviews-item__content Для демакияжа и обезжиривания кожи перед аппаратными процедурами. Перед микронидлингом. Гипоаллергенный. Перед применением масок, в том числе альгинатных.
+            .good-tab-reviews-more 
+              a.good-tab-reviews-more__btn(href="#") Показать ещё
+
+  section.cards.margin-block.slider4
+    .mycontainer
+      .cards-top
+        .h2title Вас может заинтересовать
+      .cards-items-wrap
+        .cards-items.swiper-container
+          .cards-wrap.swiper-wrapper
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+        .swiper-button-next
+        .swiper-button-prev

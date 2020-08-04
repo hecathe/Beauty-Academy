@@ -1,0 +1,94 @@
+extends ../template
+
+block variables
+  - var title = 'Карточка товара СИЗ'
+
+block content
+  section.good.margin-block
+    .mycontainer
+      .good-row
+        .good__img
+          img(src="assets/images/filler2.png", alt="")
+        .good-info
+          h1.h1title Маска защитная одноразовая бело-зелёная
+          .good-info__subtitle Описание
+          .good-info__text Одноразовые бахилы с ламинированной подошвой производятся из спанбонда. Однако с внутренней стороны они частично заламинированы полиэтиленовой пленкой. Цвет спанбонда в изделиях – зеленый, полиэтиленовой пленки – белый
+          .good-info__subtitle Цвет
+          .good-info-colors
+            label.good-info-colors-item
+              input(type="radio" name="color" value="2ABCBE" checked)
+              span(style="background-color: #2ABCBE")
+            label.good-info-colors-item
+              input(type="radio" name="color" value="496DC8")
+              span(style="background-color: #496DC8")
+            label.good-info-colors-item
+              input(type="radio" name="color" value="414141")
+              span(style="background-color: #414141")
+          .good-info-row
+            a.good-info__btn.btn-background(href="#") В корзину
+            .good-info__newprice 30
+              span.rub__icon руб.
+            .good-info__oldprice 44
+              span.rub__icon руб.
+
+      .good-content.tabs
+        .good-navigation
+          a.good-navigation__item.active.tabs-navigation-item(href="#tab1") Описание
+          a.good-navigation__item.tabs-navigation-item(href="#tab2") Доставка и оплата
+          a.good-navigation__item.tabs-navigation-item(href="#tab3") Отзывы
+        .good-tab.active.tabs-tab#tab1
+          .good-tab-col
+            .good-tab__title Предназначение
+            .good-tab__text 
+              p Медицинские заведения - поликлиники, стационары больницы, санатории, стоматологические кабинеты, роддомы, лаборатории
+              p Места большого краткосрочного потока людей - выставки, галереи, музеи
+              p Учреждения сферы - садики, школы, частные курсы
+              p Комплексные заведения спортивного назначения - бассейны, боулинг клубы, фитнес или спортклубы
+              p Фабрики и заводы, где имеются нормы гигиенической защиты, при посещении цеха
+          .good-tab-col
+            .good-tab__title Какие бывают маски
+            .good-tab__text 
+              p Полиэтиленовые. Могут изготавливаться из двух видов полиэтилена - низкого или высокого давления, что влияет на фактуру – одни гладкие и тонкие, другие «хрустящие» и плотные. В зависимости от плотности различается прочность
+              p Текстурированные. Имеют рифленую подошву, не скользят. Такими часто пользуются врачи в операционных
+              p Нетканые шьются по  форме ноги, поэтому считаются самыми комфортными. Применяются для персонала больниц
+        .good-tab.tabs-tab#tab2
+          .good-tab-col
+            .good-tab__title Доставка и оплата
+        .good-tab.tabs-tab#tab3
+          .good-tab-reviews
+            .good-tab-reviews-item
+              .good-tab-reviews-item-info
+                .good-tab-reviews-item__rate(data-rate="5")
+                .good-tab-reviews-item__text 21.02.20
+                .good-tab-reviews-item__name Анастасия
+                .good-tab-reviews-item__text Москва
+              .good-tab-reviews-item__content Для демакияжа и обезжиривания кожи перед аппаратными процедурами. Перед микронидлингом. Гипоаллергенный. Перед применением масок, в том числе альгинатных.
+            .good-tab-reviews-item
+              .good-tab-reviews-item-info
+                .good-tab-reviews-item__rate(data-rate="3")
+                .good-tab-reviews-item__text 21.02.20
+                .good-tab-reviews-item__name Анастасия
+                .good-tab-reviews-item__text Москва
+              .good-tab-reviews-item__content Для демакияжа и обезжиривания кожи перед аппаратными процедурами. Перед микронидлингом. Гипоаллергенный. Перед применением масок, в том числе альгинатных.
+            .good-tab-reviews-more 
+              a.good-tab-reviews-more__btn(href="#") Показать ещё
+
+  section.cards.margin-block.slider4
+    .mycontainer
+      .cards-top
+        .h2title Вас может заинтересовать
+      .cards-items-wrap
+        .cards-items.swiper-container
+          .cards-wrap.swiper-wrapper
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+            .cards-item-wrap.swiper-slide
+              include ../common/cards-item.pug
+        .swiper-button-next
+        .swiper-button-prev

@@ -1,0 +1,36 @@
+extends ../template
+
+block variables
+  - var title = 'Карта сайта'
+
+block content
+  .map
+    .mycontainer
+      table.map-table
+        tbody
+          tr
+            td
+              a.map-table__link(href="main.html" target="_blank") Главная
+          tr
+            td
+              a.map-table__link(href="catalog.html" target="_blank") Каталог
+            td
+              a.map-table__link(href="good-siz.html" target="_blank") Карточка товара СИЗ
+            td
+              a.map-table__link(href="good-filler.html" target="_blank") Карточка товара Филлер
+          tr
+            td
+              a.map-table__link(href="about.html" target="_blank") О нас
+          tr
+            td
+              a.map-table__link(href="price.html" target="_blank") Цены
+          tr
+            td
+              a.map-table__link(href="stock.html" target="_blank") Акции
+          tr
+            td
+              a.map-table__link(href="contacts.html" target="_blank") Контакты
+          tr
+            td
+              a.map-table__link(href="payment.html" target="_blank") Оплата и доставка
+          

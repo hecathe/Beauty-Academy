@@ -1,0 +1,79 @@
+.footer{
+  background: rgba(0, 0, 0, 0.04);
+  padding: 32px 0;
+  &-row{
+    display: flex;
+    justify-content: space-between;
+    &+&{
+      margin-top: 20px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+  &-col{
+    &:last-child{
+      flex: 0 0 40%
+    }
+  }
+  &__title{
+    font-weight: 600;
+    color: #0D0D0D;
+    &+&{
+      margin-top: 8px;
+    }
+  }
+  &-links{
+    margin-top: 16px;
+  }
+  &__link{
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    &+&{
+      margin-top: 8px;
+    }
+  }
+  &-subscribe{
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 44px;
+    input{
+      flex: 1;
+      background: #FBFBFB;
+      border-radius: 3px;
+      height: 38px;
+      padding: 0 20px;
+      border: 1px solid #FBFBFB;
+      font-weight: 500;
+      color: #000000;
+      &::placeholder{
+        color: #B5B5B5;
+      }
+    }
+    button{
+      border: none;
+      flex: 0 0 200px;
+      margin-left: 24px;
+      cursor: pointer;
+    }
+  }
+  &__email{
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #000000;
+    text-align: right;
+    a{
+      display: inline-block;
+      font-weight: 600;
+    }
+  }
+  &__text{
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    a{
+      display: inline-block;
+      font-weight: 600;
+      color: #0D0D0D;
+    }
+  }
+}

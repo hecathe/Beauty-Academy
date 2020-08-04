@@ -1,0 +1,164 @@
+extends ../template
+
+block variables
+  - var title = 'Каталог'
+
+block content
+  section.catalog
+    .mycontainer
+      form.filter(action="#")
+        .filter__title Фильтр
+        .filter__search
+          label(for="search")
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="5.33333" cy="5.33333" r="4.58333" stroke="#9E9E9E" stroke-width="1.5"/>
+              <path d="M11.471 12.5304C11.7639 12.8233 12.2387 12.8233 12.5316 12.5304C12.8245 12.2375 12.8245 11.7626 12.5316 11.4698L11.471 12.5304ZM12.5316 11.4698L9.1983 8.13642L8.13764 9.19708L11.471 12.5304L12.5316 11.4698Z" fill="#9E9E9E"/>
+            </svg>
+          input(type="text" placeholder="Поиск" id="search")
+        
+        .filter-category
+          .filter-category__title.accordion.active Цена
+          .filter-category-content.active.filter-category-price
+            .filter-category-inverse
+              label
+                span от
+                input(type="text" placeholder="0 ₽")
+              span
+              label
+                span до
+                input(type="text" placeholder="100 000 ₽")
+        .filter-category
+          .filter-category__title.accordion.active Тип товара
+          .filter-category-content.active
+            .filter-category-inverse
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Филлеры")
+                span
+                span Филлеры
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Маски")
+                span
+                span Маски
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Перчатки")
+                span
+                span Перчатки
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Халаты")
+                span
+                span Халаты
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Антисептики")
+                span
+                span Антисептики
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Антисептики")
+                span
+                span Антисептики
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Антисептики")
+                span
+                span Антисептики
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Антисептики")
+                span
+                span Антисептики
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Антисептики")
+                span
+                span Антисептики
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Антисептики")
+                span
+                span Антисептики
+        .filter-category
+          .filter-category__title.accordion.active Производители
+          .filter-category-content.active
+            .filter-category-inverse
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Arawia")
+                span
+                span Arawia
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Aloha")
+                span
+                span Aloha
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Hawaiiana")
+                span
+                span Hawaiiana
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Supertan")
+                span
+                span Supertan
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Soleo")
+                span
+                span Soleo
+        .filter-category
+          .filter-category__title.accordion.active Страна
+          .filter-category-content.active
+            .filter-category-inverse
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Россия")
+                span
+                span Россия
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Германия")
+                span
+                span Германия
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Юж. Корея")
+                span
+                span Юж. Корея
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="Польша")
+                span
+                span Польша
+              label.filter-category-item
+                input(type="checkbox" name="Тип товара" value="США")
+                span
+                span США
+        
+        button.filter__clear(type="reset") Отчистить фильтр
+
+      .catalog-content
+        h1.h1title Каталог
+        .catalog-top
+          span Найдено 24 варианта
+          form.catalog-top-btns(action="#")
+            label.catalog-top__btn
+              input(type="radio" name="sort" value="Сначала дороже")
+              span Сначала дороже
+            label.catalog-top__btn
+              input(type="radio" name="sort" value="Сначала дешевле")
+              span Сначала дешевле
+            label.catalog-top__btn
+              input(type="radio" name="sort" value="Популярно" checked)
+              span Популярно
+            label.catalog-top__btn
+              input(type="radio" name="sort" value="Высокий рейтинг")
+              span Высокий рейтинг
+        .catalog-items
+          include ../common/cards-item.pug
+          include ../common/cards-item.pug
+          include ../common/cards-item.pug
+          include ../common/cards-item.pug
+        a.catalog__more(href="#") Показать еще
+
+  section.banner.banner_white.margin-block
+    .mycontainer
+      .banner-col
+        .banner__title Новые товары из категории индивидуальных средств защиты
+        a.banner__btn.btn-background(href="#") Подробнее
+      .banner-col
+        img(src="assets/images/banner2.png", alt="")
+
+  section.guarantee
+    .mycontainer
+      .title Гарантия
+      .guarantee-content
+        .guarantee-col
+          p Покупая средства индивидуальной защиты у нас вы можете быть уверенны в подлинности приобретаемой продукции. Мы закупаем товар только у добросоветных и проверенных производителей, которые дорожат своим именем и приобретённой репутацией 
+        .guarantee-col
+          p У нас вы можете купить и заказать абсолютно любой товар из категории средств индивидуальной защиты, среди которых: маски, шапочки, перчатки, антисептики и дезинфекторы, халаты, бахилы и ещё много всего 

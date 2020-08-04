@@ -1,0 +1,106 @@
+@import 'common/normalize';
+@import 'common/adaptive';
+
+html,
+body{
+  font-family: 'Gilroy';
+  font-size: 14px;
+  background: #F5F5F5;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1;
+}
+
+.mycontainer{
+	max-width: 1360px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.rub__icon{
+  display: inline-block;
+  vertical-align: top;
+  width: .70em;
+  position: relative;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  &:after{
+    content: '\20bd';
+    position: absolute;
+    right: 0;
+    text-indent: 0;
+  }
+}
+
+.margin-block{
+  margin-bottom: 160px;
+}
+
+.h1title{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  color: #0D0D0D;
+  margin-bottom: 30px;
+} 
+
+.h2title{
+  font-weight: 500;
+  color: #0D0D0D;
+  font-size: 30px;
+  line-height: 130%;
+  margin-bottom: 24px;
+}
+
+
+
+.btn-background{
+  font-weight: 500;
+  color: #FFFFFF;
+  padding: 6px 24px;
+  text-align: center;
+  background: #46854D;
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: .2s;
+  @include hover{
+    &:hover{
+      background: #137848;
+    }
+    &:active{
+      background: #46854D;
+    }
+  }
+}
+
+input{
+  &.input-err{
+    border: 1px solid red!important;
+  }
+  &.input-border{
+    border: 1px solid #FBFBFB!important;
+  }
+}
+
+@import 'common/fonts';
+@import 'common/header';
+@import 'common/footer';
+@import 'common/cards-item';
+@import 'pages/index';
+@import 'pages/main';
+@import 'pages/good';
+@import 'pages/catalog';
+@import 'pages/about';
+@import 'pages/payment';
+@import 'pages/stock';
+@import 'pages/contacts';
+@import 'pages/price';
+

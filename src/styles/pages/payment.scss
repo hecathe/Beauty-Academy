@@ -1,0 +1,41 @@
+.payment{
+  &__title{
+    margin-bottom: 36px;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  &__subtitle{
+    font-weight: normal;
+    font-size: 18px;
+    h1{
+      margin-bottom: 60px;
+      display: inline-block;
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+  &-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  &-item{
+    display: flex;
+    align-items: center;
+    svg{
+      margin-right: 16px;
+    }
+    &+&{
+      margin-left: 64px;
+    }
+  }
+  &__text{
+    font-weight: 500;
+    line-height: 150%;
+    color: #7D7D7D;
+    margin-bottom: 60px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
