@@ -1,1 +1,1 @@
-# Beauty-Academy
+# https://jedenkoor.github.io/Beauty-Academy/build/
