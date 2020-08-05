@@ -122,3 +122,30 @@ if (document.querySelectorAll('.filter-category-content').length) {
   })
 }
 /*Фильтр Конец*/
+
+
+/*Показать пароль*/
+if (document.querySelectorAll('.input-pass').length) {
+  let inputPass = document.querySelectorAll('.input-pass');
+  inputPass.forEach(item => item.addEventListener('click', change));
+  function change(event) {
+    if (event.target.previousElementSibling.getAttribute('type') == 'password') {
+      event.target.previousElementSibling.setAttribute('type', 'text');
+    } else {
+      event.target.previousElementSibling.setAttribute('type', 'password');
+    }
+  }
+}
+/*Показать пароль Конец*/
+
+
+/*Закрытие попапа*/
+if (document.querySelectorAll('.popup__overlay').length) {
+  document.querySelectorAll('.popup__overlay')[0].addEventListener('click', closePopup);
+  document.querySelectorAll('.popup__close')[0].addEventListener('click', closePopup);
+  function closePopup(event) {
+    document.querySelectorAll('.popup.active')[0].classList.remove('active');
+    document.querySelectorAll('body')[0].classList.remove('fixed');
+  };
+}
+/*Закрытие попапа Конец*/

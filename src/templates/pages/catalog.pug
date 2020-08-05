@@ -4,7 +4,7 @@ block variables
   - var title = 'Каталог'
 
 block content
-  section.catalog
+  main.catalog
     .mycontainer
       form.filter(action="#")
         .filter__title Фильтр
@@ -146,6 +146,9 @@ block content
           include ../common/cards-item.pug
         a.catalog__more(href="#") Показать еще
 
+        .catalog__empty К сожалению, мы ничего не нашли по вашим критериям
+
+
   section.banner.banner_white.margin-block
     .mycontainer
       .banner-col
@@ -153,6 +156,7 @@ block content
         a.banner__btn.btn-background(href="#") Подробнее
       .banner-col
         img(src="assets/images/banner2.png", alt="")
+
 
   section.guarantee
     .mycontainer

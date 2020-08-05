@@ -4,4 +4,25 @@ block variables
   - var title = 'Цены'
 
 block content
-  section.price
+  section.price.margin-block
+    .mycontainer
+      aside.price-aside
+        a.price-aside__link(href="#") Филлеры
+        a.price-aside__link(href="#") Средства индивидуальной защиты
+        a.price-aside__link.price-aside__link_active(href="#") Все категории товаров
+      main.price-content
+        h1.h1title Цены
+        .price-category
+          h2.price-category__title Филлеры
+          - for (var i = 0; i < 9; i++)
+            .price-category-row
+              .price-category__name Филлер MesoEye С71
+              .price-category__price 4 900
+                span.rub__icon руб.
+        .price-category
+          h2.price-category__title Средства индивидуальной защиты
+          - for (var i = 0; i < 9; i++)
+            .price-category-row
+              .price-category__name Бахилы
+              .price-category__price 30
+                span.rub__icon руб.

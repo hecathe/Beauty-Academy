@@ -1,0 +1,31 @@
+extends ../template
+
+block variables
+  - var title = 'Вход'
+
+block content
+  main.lk.margin-block
+    .mycontainer
+      .lk__info Добро пожаловать!
+      h1.h1title Вход
+      .lk-navigation
+        a.lk-navigation__item.active(href="#") Войти
+        a.lk-navigation__item(href="#") Регистрация
+      .lk-content
+        .lk-content-row
+          .lk-content-col
+            form.general-form.login(action="#")
+              label.general-itemInput.general-itemInput_50
+                span Email
+                input.general-itemInput__input(type="email" data-required data-type="email" placeholder="Введите ваш email")
+              label.general-itemInput.general-itemInput_50
+                span Пароль
+                input.general-itemInput__input(type="password" data-required placeholder="Введите ваш пароль")
+                span.input-pass
+                a.recovery(href="#") Забыли пароль?
+              .general-bottomBlock
+                button.general__btn.btn-background(type="submit") Зарегистрироваться
+
+          .lk-content-col 
+            .lk-content__text Нет аккаунта?
+              a(href="#") Зарегистрируйтесь!

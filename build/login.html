@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Контакты</title>
+    <title>Вход</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,34 +63,30 @@
         </div>
       </div>
       <div class="content">
-        <main class="contacts margin-block">
+        <main class="lk margin-block">
           <div class="mycontainer">
-            <div class="contacts-col">
-              <h1 class="h1title">Наши контакты</h1>
-              <div class="contacts__subtitle">Наша почта:</div><a class="contacts__link" href="mailto:admin@beatu-guard.ru">admin@beatu-guard.ru</a>
-            </div>
-            <div class="contacts-col">
-              <h2 class="h1title">Форма связи</h2>
-              <form class="contacts-form general-form" action="#">
-                <label class="general-itemInput general-itemInput_50"><span>Имя</span>
-                  <input class="general-itemInput__input" type="text" data-required placeholder="Введите ваше имя">
-                </label>
-                <label class="general-itemInput general-itemInput_50"><span>Фамилия</span>
-                  <input class="general-itemInput__input" type="text" placeholder="Введите вашу фамилию">
-                </label>
-                <label class="general-itemInput general-itemInput_50"><span>Телефон</span>
-                  <input class="general-itemInput__input" type="tel" data-type="tel" data-required placeholder="Введите ваш телефон">
-                </label>
-                <label class="general-itemInput general-itemInput_50"><span>Email</span>
-                  <input class="general-itemInput__input" type="email" data-type="email" placeholder="Введите ваш email">
-                </label>
-                <label class="general-itemInput"><span>Ваше сообщение</span>
-                  <textarea class="general-itemInput__input"></textarea>
-                </label>
-                <div class="general-bottomBlock">
-                  <button class="general__btn btn-background" type="submit">Отправить сообщение</button>
+            <div class="lk__info">Добро пожаловать!</div>
+            <h1 class="h1title">Вход</h1>
+            <div class="lk-navigation"><a class="lk-navigation__item active" href="#">Войти</a><a class="lk-navigation__item" href="#">Регистрация</a></div>
+            <div class="lk-content">
+              <div class="lk-content-row">
+                <div class="lk-content-col">
+                  <form class="general-form login" action="#">
+                    <label class="general-itemInput general-itemInput_50"><span>Email</span>
+                      <input class="general-itemInput__input" type="email" data-required data-type="email" placeholder="Введите ваш email">
+                    </label>
+                    <label class="general-itemInput general-itemInput_50"><span>Пароль</span>
+                      <input class="general-itemInput__input" type="password" data-required placeholder="Введите ваш пароль"><span class="input-pass"></span><a class="recovery" href="#">Забыли пароль?</a>
+                    </label>
+                    <div class="general-bottomBlock">
+                      <button class="general__btn btn-background" type="submit">Зарегистрироваться</button>
+                    </div>
+                  </form>
                 </div>
-              </form>
+                <div class="lk-content-col"> 
+                  <div class="lk-content__text">Нет аккаунта?<a href="#">Зарегистрируйтесь!</a></div>
+                </div>
+              </div>
             </div>
           </div>
         </main>

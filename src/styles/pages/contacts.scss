@@ -21,55 +21,95 @@
     letter-spacing: 0.01em;
     color: #7D7D7D;
   }
-  .general-form{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .general-itemInput{
-      margin-bottom: 24px;
+}
+
+.general-form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &.recover{
+    max-width: 456px;
+    margin-top: 64px;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    .general-itemInput.general-itemInput_50{
       width: 100%;
-      &.general-itemInput_25{
-        width: calc(100% / 4 - (72px / 4));
-      }
-      &.general-itemInput_33{
-        width: calc(100% / 3 - (48px / 3));
-      }
-      &.general-itemInput_50{
-        width: calc(100% / 2 - (24px / 2));
-      }
-      > span{
-        display: inline-block;
-        margin-bottom: 4px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 120%;
-      }
-      &__input{
-        border: 1px solid #FBFBFB;
-        width: 100%;
-        background: #FBFBFB;
-        border-radius: 3px;
-        padding: 0 12px;
-        font-size: 16px;
-        height: 36px;
-        &::placeholder{
-          color: #7D7D7D;
-        }
-      }
-      textarea{
-        padding-top: 10px;
-        height: 113px;
-        resize: none;
-      }
+      margin-right: 24px;
+      margin-bottom: 0;
     }
     .general-bottomBlock{
-      margin-left: auto;
       button{
-        width: 200px;
-        padding: 8px 24px;
-        border: none;
+        width: auto;
+      }
+    }
+  }
+  .general-itemInput{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    width: 100%;
+    &.general-itemInput_25{
+      width: calc(100% / 4 - (72px / 4));
+    }
+    &.general-itemInput_33{
+      width: calc(100% / 3 - (48px / 3));
+    }
+    &.general-itemInput_50{
+      width: calc(100% / 2 - (24px / 2));
+    }
+    > span{
+      display: inline-block;
+      margin-bottom: 4px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+      &.input-pass{
+        position: absolute;
+        right: 12px;
+        top: 36px;
+        width: 16px;
+        height: 10px;
+        background: url(../images/input-pass.png) center/contain no-repeat;
         cursor: pointer;
       }
+    }
+    > a{
+      &.recovery{
+        margin-top: 12px;
+        margin-left: auto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #7D7D7D;
+        border-bottom: 1px solid #7D7D7D;
+      }
+    }
+    &__input{
+      border: 1px solid #FBFBFB;
+      width: 100%;
+      background: #FBFBFB;
+      border-radius: 3px;
+      padding: 0 32px 0 12px;
+      font-size: 16px;
+      height: 36px;
+      &::placeholder{
+        color: #7D7D7D;
+      }
+    }
+    textarea{
+      padding-top: 10px;
+      height: 113px;
+      resize: none;
+    }
+  }
+  .general-bottomBlock{
+    margin-left: auto;
+    button{
+      width: 200px;
+      padding: 8px 24px;
+      border: none;
+      cursor: pointer;
     }
   }
 }

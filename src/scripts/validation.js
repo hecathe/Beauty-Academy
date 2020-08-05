@@ -59,10 +59,11 @@ function raValidation(form) {
       inputs[i].classList.remove('input-err');
     }
   }
-  console.log(temp)
   if (temp == false) {
+    console.warn('Форма заполнена не корректно')
     return false;
   } else {
+    console.log('Форма отправлена')
     return true;
   }
 }
@@ -75,8 +76,13 @@ submitButton.forEach(item => {
     event.preventDefault();
     let form = this.closest('form');
     if (raValidation(form)) {
-      form.submit();
-      ifSuccess(form);
+      if (!event.target.classList.contains('popup-btn')) {
+        form.submit();
+        ifSuccess(form);
+      } else {
+        document.querySelectorAll('#' + event.target.getAttribute('data-modal'))[0].classList.add('active');
+        document.querySelectorAll('body')[0].classList.add('fixed');
+      }
     }
   });
 });

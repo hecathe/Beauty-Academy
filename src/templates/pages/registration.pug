@@ -1,0 +1,65 @@
+extends ../template
+
+block variables
+  - var title = 'Регистрация'
+
+block content
+  main.lk.margin-block
+    .mycontainer
+      .lk__info Добро пожаловать!
+      h1.h1title Регистрация 
+      .lk-navigation
+        a.lk-navigation__item(href="#") Войти
+        a.lk-navigation__item.active(href="#") Регистрация
+      .lk-content
+        .lk-content-row
+          .lk-content-col
+            form.general-form(action="#")
+              label.general-itemInput.general-itemInput_50
+                span Имя
+                input.general-itemInput__input(type="text" data-required placeholder="Введите ваше имя")
+              label.general-itemInput.general-itemInput_50
+                span Фамилия
+                input.general-itemInput__input(type="text" placeholder="Введите вашу фамилию")
+              label.general-itemInput.general-itemInput_50
+                span Телефон
+                input.general-itemInput__input(type="tel" data-type="tel" data-required placeholder="Введите ваш телефон")
+              label.general-itemInput.general-itemInput_50
+                span Email
+                input.general-itemInput__input(type="email" data-required data-type="email" placeholder="Введите ваш email")
+              label.general-itemInput.general-itemInput_50
+                span Пароль
+                input.general-itemInput__input(type="password" data-required placeholder="Введите ваш пароль")
+                span.input-pass
+              label.general-itemInput.general-itemInput_50
+                span Подтверждение пароля
+                input.general-itemInput__input(type="password" data-required placeholder="Подтвердите пароль")
+                span.input-pass
+              .general-bottomBlock
+                button.general__btn.btn-background.popup-btn(type="submit" data-modal="confirm-phone") Зарегистрироваться
+            .popup#confirm-phone
+              .popup-wrap
+                .popup__overlay
+                .popup-content
+                  .popup__close
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 1L1 21M1 1L21 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  //done
+                  .confirm-phone__title На ваш телефон отправлен код подтверждения
+                  form.confirm-phone-form(action="#")
+                    input(type="text" data-required placeholder="Введите код")
+                    button.btn-background(type="submit") Подтвердить
+                  //error
+                  .confirm-phone-content
+                    .confirm-phone__title Пользователь с данным номером телефона уже существует
+                    a.confirm-phone__link(href="#")
+                      <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM17 4.5H1V3.5H17V4.5Z" fill="#496DC8"/>
+                      </svg>
+                      | Вернуться на страницу авторизации
+                    
+
+          .lk-content-col 
+            .lk-content__text Уже есть аккаунт?
+              a(href="#") Войдите!

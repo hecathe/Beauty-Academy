@@ -1,11 +1,16 @@
 @import 'common/normalize';
 @import 'common/adaptive';
 
-html,
 body{
   font-family: 'Gilroy';
   font-size: 14px;
   background: #F5F5F5;
+  &.fixed{
+		overflow: hidden;
+		@include hover{
+			padding-right: 17px;
+		}
+	}
 }
 
 .wrapper {
@@ -52,6 +57,10 @@ body{
   margin-bottom: 30px;
 } 
 
+.lk .h1title{
+  font-size: 36px;
+}
+
 .h2title{
   font-weight: 500;
   color: #0D0D0D;
@@ -59,8 +68,6 @@ body{
   line-height: 130%;
   margin-bottom: 24px;
 }
-
-
 
 .btn-background{
   font-weight: 500;
@@ -94,6 +101,7 @@ input{
 @import 'common/header';
 @import 'common/footer';
 @import 'common/cards-item';
+@import 'common/popup';
 @import 'pages/index';
 @import 'pages/main';
 @import 'pages/good';
@@ -103,4 +111,5 @@ input{
 @import 'pages/stock';
 @import 'pages/contacts';
 @import 'pages/price';
+@import 'pages/lk';
 
