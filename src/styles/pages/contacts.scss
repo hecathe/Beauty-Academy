@@ -27,6 +27,9 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  &+&{
+    margin-top: 52px;
+  }
   &.recover{
     max-width: 456px;
     margin-top: 64px;

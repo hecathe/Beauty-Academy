@@ -85,4 +85,31 @@
       }
     }
   }
+  &-orders{
+    &-row{
+      display: flex;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      color: #7D7D7D;
+      font-size: 16px;
+      & + .lk-orders__empty{
+        margin-top: 60px;
+      }
+      &:last-child{
+        bordeR: none;
+      }
+      &_header{
+        bordeR: none;
+        font-weight: 500;
+        color: #000000;
+      }
+    }
+    &-col{
+      flex: 1
+    }
+    &__empty{
+      font-size: 16px;
+      text-align: center;
+    }
+  }
 }

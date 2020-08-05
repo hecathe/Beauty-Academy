@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Регистрация</title>
+    <title>История заказов</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,64 +65,35 @@
       <div class="content">
         <main class="lk margin-block">
           <div class="mycontainer">
-            <div class="lk__info">Добро пожаловать!</div>
-            <h1 class="h1title">Регистрация </h1>
-            <div class="lk-navigation"><a class="lk-navigation__item" href="#">Войти</a><a class="lk-navigation__item active" href="#">Регистрация</a></div>
-            <div class="lk-content">
-              <div class="lk-content-row">
-                <div class="lk-content-col">
-                  <form class="general-form" action="#">
-                    <label class="general-itemInput general-itemInput_50"><span>Имя</span>
-                      <input class="general-itemInput__input" type="text" data-required placeholder="Введите ваше имя">
-                    </label>
-                    <label class="general-itemInput general-itemInput_50"><span>Фамилия</span>
-                      <input class="general-itemInput__input" type="text" placeholder="Введите вашу фамилию">
-                    </label>
-                    <label class="general-itemInput general-itemInput_50"><span>Телефон</span>
-                      <input class="general-itemInput__input" type="tel" data-type="tel" data-required placeholder="Введите ваш телефон">
-                    </label>
-                    <label class="general-itemInput general-itemInput_50"><span>Email</span>
-                      <input class="general-itemInput__input" type="email" data-required data-type="email" placeholder="Введите ваш email">
-                    </label>
-                    <label class="general-itemInput general-itemInput_50"><span>Пароль</span>
-                      <input class="general-itemInput__input" type="password" data-required placeholder="Введите ваш пароль"><span class="input-pass"></span>
-                    </label>
-                    <label class="general-itemInput general-itemInput_50"><span>Подтверждение пароля</span>
-                      <input class="general-itemInput__input" type="password" data-required placeholder="Подтвердите пароль"><span class="input-pass"></span>
-                    </label>
-                    <div class="general-bottomBlock">
-                      <button class="general__btn btn-background popup-btn" type="submit" data-modal="confirm-phone">Зарегистрироваться</button>
-                    </div>
-                  </form>
-                  <div class="popup" id="confirm-phone">
-                    <div class="popup-wrap">
-                      <div class="popup__overlay"></div>
-                      <div class="popup-content">
-                        <div class="popup__close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 1L1 21M1 1L21 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-                        </div>
-                        <!--done-->
-                        <div class="confirm-phone__title">На ваш телефон отправлен код подтверждения</div>
-                        <form class="confirm-phone-form" action="#">
-                          <input type="text" data-required placeholder="Введите код">
-                          <button class="btn-background" type="submit">Подтвердить</button>
-                        </form>
-                        <!--error-->
-                        <div class="confirm-phone-content">
-                          <div class="confirm-phone__title">Пользователь с данным номером телефона уже существует</div><a class="confirm-phone__link" href="#">
-                            <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM17 4.5H1V3.5H17V4.5Z" fill="#496DC8"/>
-</svg>Вернуться на страницу авторизации</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="lk-content-col"> 
-                  <div class="lk-content__text">Уже есть аккаунт?<a href="#">Войдите!</a></div>
-                </div>
+            <div class="lk__info">Пархоменко И. </div>
+            <h1 class="h1title">История заказов</h1>
+            <div class="lk-navigation"><a class="lk-navigation__item active" href="#">История заказов</a><a class="lk-navigation__item" href="#">Персональные данные</a></div>
+            <div class="lk-orders">
+              <div class="lk-orders-row lk-orders-row_header">
+                <div class="lk-orders-col">Номер заказа</div>
+                <div class="lk-orders-col">Дата</div>
+                <div class="lk-orders-col">Наименование</div>
+                <div class="lk-orders-col">Сумма</div>
+                <div class="lk-orders-col">Скидка</div>
+                <div class="lk-orders-col">Количество</div>
               </div>
+              <div class="lk-orders-row">
+                <div class="lk-orders-col">314582</div>
+                <div class="lk-orders-col">17.04.20</div>
+                <div class="lk-orders-col">Ф иллер PRINCESS Rich</div>
+                <div class="lk-orders-col">4 900<span class="rub__icon">руб.</span></div>
+                <div class="lk-orders-col">900<span class="rub__icon">руб.</span></div>
+                <div class="lk-orders-col">1 шт.</div>
+              </div>
+              <div class="lk-orders-row">
+                <div class="lk-orders-col">314582</div>
+                <div class="lk-orders-col">17.04.20</div>
+                <div class="lk-orders-col">Филлер PRINCESS Rich</div>
+                <div class="lk-orders-col">4 900<span class="rub__icon">руб.</span></div>
+                <div class="lk-orders-col">900<span class="rub__icon">руб.</span></div>
+                <div class="lk-orders-col">1 шт.</div>
+              </div>
+              <div class="lk-orders__empty">У вас  ещё не было оформленных заказов</div>
             </div>
           </div>
         </main>

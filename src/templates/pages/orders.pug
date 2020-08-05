@@ -1,0 +1,40 @@
+extends ../template
+
+block variables
+  - var title = 'История заказов'
+
+block content
+  main.lk.margin-block
+    .mycontainer
+      .lk__info Пархоменко И. 
+      h1.h1title История заказов
+      .lk-navigation
+        a.lk-navigation__item.active(href="#") История заказов
+        a.lk-navigation__item(href="#") Персональные данные
+      .lk-orders
+        .lk-orders-row.lk-orders-row_header
+          .lk-orders-col Номер заказа
+          .lk-orders-col Дата
+          .lk-orders-col Наименование
+          .lk-orders-col Сумма
+          .lk-orders-col Скидка
+          .lk-orders-col Количество
+        .lk-orders-row
+          .lk-orders-col 314582
+          .lk-orders-col 17.04.20
+          .lk-orders-col Ф иллер PRINCESS Rich
+          .lk-orders-col 4 900
+            span.rub__icon руб.
+          .lk-orders-col 900
+            span.rub__icon руб.
+          .lk-orders-col 1 шт.
+        .lk-orders-row
+          .lk-orders-col 314582
+          .lk-orders-col 17.04.20
+          .lk-orders-col Филлер PRINCESS Rich
+          .lk-orders-col 4 900
+            span.rub__icon руб.
+          .lk-orders-col 900
+            span.rub__icon руб.
+          .lk-orders-col 1 шт.
+        .lk-orders__empty У вас  ещё не было оформленных заказов

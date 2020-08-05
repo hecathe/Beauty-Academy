@@ -1,0 +1,46 @@
+extends ../template
+
+block variables
+  - var title = 'Персональные данные'
+
+block content
+  main.lk.margin-block
+    .mycontainer
+      .lk__info Пархоменко И. 
+      h1.h1title Персональные данные
+      .lk-navigation
+        a.lk-navigation__item(href="#") История заказов
+        a.lk-navigation__item.active(href="#") Персональные данные
+      .lk-content
+        .lk-content-row
+          .lk-content-col
+            form.general-form(action="#")
+              label.general-itemInput.general-itemInput_50
+                span Имя
+                input.general-itemInput__input(type="text" data-required placeholder="Введите ваше имя")
+              label.general-itemInput.general-itemInput_50
+                span Фамилия
+                input.general-itemInput__input(type="text" placeholder="Введите вашу фамилию")
+              label.general-itemInput.general-itemInput_50
+                span Телефон
+                input.general-itemInput__input(type="tel" data-type="tel" data-required placeholder="Введите ваш телефон")
+              label.general-itemInput.general-itemInput_50
+                span Email
+                input.general-itemInput__input(type="email" data-required data-type="email" placeholder="Введите ваш email")
+              .general-bottomBlock
+                button.general__btn.btn-background(type="submit") Изменить данные
+            
+            form.general-form(action="#")
+              label.general-itemInput.general-itemInput_50
+                span Пароль
+                input.general-itemInput__input(type="password" data-required placeholder="Введите ваш пароль")
+                span.input-pass
+              label.general-itemInput.general-itemInput_50
+                span Подтверждение пароля
+                input.general-itemInput__input(type="password" data-required placeholder="Подтвердите пароль")
+                span.input-pass
+              .general-bottomBlock
+                button.general__btn.btn-background.popup-btn(type="submit" data-modal="confirm-phone") Изменить пароль
+                
+          .lk-content-col
+            
