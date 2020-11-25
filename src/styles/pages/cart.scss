@@ -190,6 +190,9 @@
         padding-bottom: 12px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
+    @include w480 {
+        border-bottom: none;
+    }
     @include w359 {
         flex-direction: column;
     }
@@ -245,6 +248,9 @@
         grid-row: 2 / -1;
         margin: 0;
         border-bottom: none;
+    }
+    @include w480 {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
 }
 .cart-info__total {

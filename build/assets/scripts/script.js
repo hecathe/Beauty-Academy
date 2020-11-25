@@ -191,11 +191,11 @@ if (document.querySelectorAll('.proviso-js').length) {
   let submitBtn = document.querySelector('.ordering__submit');
 
   submitBtn.addEventListener('click', function(){
-    if(!condition.checked) {
+    if(condition.checked) {
+      submitBtn.classList.remove('disabled');
+    } else {
       event.preventDefault();
       submitBtn.classList.add('disabled');
-    } else {
-      submitBtn.classList.remove('disabled');
     }
   });
 }

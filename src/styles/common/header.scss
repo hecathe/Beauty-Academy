@@ -426,6 +426,14 @@
   a{
     color: #B5B5B5;
   }
+  &__item {
+    @include w768 {
+      font-size: 14px;
+    }
+    @include w480 {
+      font-size: 12px;
+    }
+  }
   &__item:not(a){
     font-weight: 500;
     line-height: 16px;
