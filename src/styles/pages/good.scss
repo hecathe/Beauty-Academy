@@ -3,6 +3,15 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
+    @include w768 {
+      margin-bottom: 76px;
+    }
+    @include w480 {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 80px;
+    }
   }
   &__img{
     height: 438px;
@@ -13,14 +22,27 @@
       height: 100%;
       object-fit: contain;
     }
+    @include w768 {
+      width: 256px;
+      height: 225px;
+      flex: none;
+      padding: 0;
+    }
+    @include w480 {
+      margin-bottom: 28px;
+    }
   }
   &-info{
     flex: 0 0 calc(40%);
+    @include w768 {
+      flex: 0 0 calc(55%);
+    }
     &__title{
       margin-bottom: 44px;
-      font-weight: 600;
-      font-size: 30px;
-      line-height: 130%;
+      @include w480 {
+        position: absolute;
+        top: 0;
+      }
     }
     &__subtitle{
       font-weight: 600;
@@ -31,6 +53,9 @@
       line-height: 130%;
       color: #7D7D7D;
       margin-bottom: 52px;
+      @include w480 {
+        font-size: 12px;
+      }
     }
     &-colors{
       display: flex;
@@ -69,12 +94,21 @@
       padding: 17px 24px;
       margin-right: 40px;
       font-size: 18px;
+      @include w768 {
+        width: 155px;
+        font-size: 16px;
+        padding: 11px 40px;
+        margin-right: 28px;
+      }
     }
     &__newprice{
       font-weight: 600;
       font-size: 24px;
       line-height: 130%;
       margin-right: 16px;
+      @include w480 {
+        font-size: 18px;
+      }
     }
     &__oldprice{
       font-weight: 500;
@@ -82,17 +116,30 @@
       line-height: 130%;
       text-decoration-line: line-through;
       color: #7D7D7D;
+      @include w480 {
+        font-size: 12px;
+      }
     }
   }
   &-navigation{
     display: flex;
     margin-bottom: 60px;
+    @include w480 {
+      margin-bottom: 36px;
+    }
     &__item{
       border: 1px solid #FFFFFF;
       padding: 11px 24px;
       font-weight: 500;
       color: #9E9E9E;
       transition: .1s;
+      @include w480 {
+        font-size: 12px;
+        padding: 11px 16px;
+      }
+      @include w359 {
+        padding: 10px;
+      }
       &:not(:first-child){
         margin-left: -1px;
       }
@@ -120,20 +167,38 @@
     &.active{
       display: flex;
       justify-content: space-between;
+      @include w480 {
+        flex-direction: column;
+      }
     }
     &-col{
-      flex: 0 0 40%
+      flex: 0 0 40%;
+      @include w480 {
+        margin-bottom: 36px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
     }
     &__title{
       font-weight: 600;
       font-size: 18px;
       margin-bottom: 16px;
+      @include w480 {
+        font-size: 14px;
+      }
     }
     &__text{
       font-weight: 500;
       color: #7D7D7D;
       p+p{
         margin-top: 16px;
+        @include w480 {
+          margin-bottom: 12px;
+        }
+      }
+      @include w480 {
+        font-size: 12px;
       }
     }
     &-reviews{
@@ -201,6 +266,10 @@
           font-weight: 500;
           color: #7D7D7D;
           background: #E0E2E9;
+          @include w359 {
+            width: 100%;
+            padding: 11px;
+          }
         }
       }
     }

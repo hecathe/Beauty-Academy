@@ -1,0 +1,148 @@
+extends ../template
+
+block variables
+  - var title = 'Оформление'
+
+block content
+  main.ordering.margin-block
+    .mycontainer
+      h1.h1title Оформление
+      
+      .ordering__content
+        form.ordering__form#order-form(action="#" method="get")
+          .ordering__wrapper
+            h4.ordering__subtitle.cart-info__title Покупатель
+            .ordering__user-info
+              .ordering__user-name Пархоменко И.
+              .ordering__user-wrap
+                .ordering__user-contacts +7 900 000 00 00
+                .ordering__user-contacts fasdh@gmail.com
+          .ordering__order-info
+            h4.ordering__subtitle.cart-info__title Заказ
+            ul.ordering__list
+              li.ordering__item
+                .ordering__img-wrap
+                  img.ordering__img(src="assets/images/filler-1.png", alt="Филлер PRINCESS Rich")
+                .ordering__caption Филлер PRINCESS Rich
+                span.ordering__num 1 шт.
+              li.ordering__item
+                .ordering__img-wrap
+                  img.ordering__img(src="assets/images/filler3.png", alt="Филлер PRINCESS Rich")
+                .ordering__caption Филлер PRINCESS Rich
+                span.ordering__num 1 шт.
+              li.ordering__item
+                .ordering__img-wrap
+                  img.ordering__img(src="assets/images/filler-1.png", alt="Филлер PRINCESS Rich")
+                .ordering__caption Филлер PRINCESS Rich
+                span.ordering__num 1 шт.
+              li.ordering__item
+                .ordering__img-wrap
+                  img.ordering__img(src="assets/images/filler3.png", alt="Филлер PRINCESS Rich")
+                .ordering__caption Филлер PRINCESS Rich
+                span.ordering__num 1 шт.
+              li.ordering__item
+                .ordering__img-wrap
+                  img.ordering__img(src="assets/images/filler-1.png", alt="Филлер PRINCESS Rich")
+                .ordering__caption Филлер PRINCESS Rich
+                span.ordering__num 1 шт.
+              li.ordering__item
+                .ordering__img-wrap
+                  img.ordering__img(src="assets/images/filler3.png", alt="Филлер PRINCESS Rich")
+                .ordering__caption Филлер PRINCESS Rich
+                span.ordering__num 1 шт.
+              li.ordering__item
+                .ordering__img-wrap
+                  img.ordering__img(src="assets/images/filler-1.png", alt="Филлер PRINCESS Rich")
+                .ordering__caption Филлер PRINCESS Rich
+                span.ordering__num 1 шт.
+              li.ordering__item
+                .ordering__img-wrap
+                  img.ordering__img(src="assets/images/filler3.png", alt="Филлер PRINCESS Rich")
+                .ordering__caption Филлер PRINCESS Rich
+                span.ordering__num 1 шт.
+
+          fieldset.ordering__fieldset.ordering__fieldset--checkbox
+            legend.ordering__subtitle.cart-info__title Cпособ получения
+            label.ordering__label.ordering__label--check
+              input.ordering__input.visually-hidden(type="radio" name="delivery" value="courier" checked)
+              span.ordering__text Доставка курьером – 250 
+                span (бесплатно при заказе от 7 000 ₽)
+            label.ordering__label.ordering__label--check
+              input.ordering__input.visually-hidden(type="radio" name="delivery" value="pick-up-point")
+              span.ordering__text Пункт выдачи товаров – от 300 ₽ 
+                span (конечная стоимость зависит от вашего месторасположения)
+          
+          fieldset.ordering__fieldset
+            legend.ordering__subtitle.cart-info__title Дата и время доставки
+            .ordering__box
+              .ordering__select-wrap
+                select.ordering__select#date-select(name="date-select")
+                  option(value="Суббота, 20 июля") Суббота, 20 июля
+                  option(value="Суббота, 20 июля") Суббота, 20 июля
+                  option(value="Суббота, 20 июля") Суббота, 20 июля
+                  option(value="Суббота, 20 июля") Суббота, 20 июля
+                  option(value="Суббота, 20 июля") Суббота, 20 июля
+                  option(value="Суббота, 20 июля") Суббота, 20 июля
+              .ordering__select-wrap
+                select.ordering__select#time-select(name="time-select")
+                  option(value="С 12:00 до 18:00, бесплатно") С 12:00 до 18:00, бесплатно
+                  option(value="С 12:00 до 18:00, бесплатно") С 12:00 до 18:00, бесплатно
+                  option(value="С 12:00 до 18:00, бесплатно") С 12:00 до 18:00, бесплатно
+                  option(value="С 12:00 до 18:00, бесплатно") С 12:00 до 18:00, бесплатно
+                  option(value="С 12:00 до 18:00, бесплатно") С 12:00 до 18:00, бесплатно
+                  option(value="С 12:00 до 18:00, бесплатно") С 12:00 до 18:00, бесплатно
+
+          fieldset.ordering__fieldset
+            legend.ordering__subtitle.cart-info__title Адрес доставки
+            .ordering__grid
+              label.ordering__label
+                input.ordering__input(type="text" placeholder="Введите город" data-required)
+              label.ordering__label
+                input.ordering__input(type="text" placeholder="Введите улицу" data-required)
+              label.ordering__label
+                input.ordering__input(type="number" placeholder="Введите номер дома" data-required)
+              label.ordering__label
+                input.ordering__input(type="number" placeholder="Введите номер квартиры" data-required)
+
+          fieldset.ordering__fieldset.ordering__fieldset--checkbox
+            legend.ordering__subtitle.cart-info__title Cпособ оплаты
+            label.ordering__label.ordering__label--check
+              input.ordering__input.visually-hidden(type="radio" name="pay" value="online" checked)
+              span.ordering__text Картой онлайн
+            label.ordering__label.ordering__label--check
+              input.ordering__input.visually-hidden(type="radio" name="pay" value="cash")
+              span.ordering__text Наличными при получении заказа
+          
+          fieldset.ordering__fieldset
+            legend.ordering__subtitle.cart-info__title Комментарий к заказу
+            textarea.ordering__comment(name="comment")
+
+        .ordering__wrap
+          .cart__info.cart-info
+            h4.cart-info__title Ваш заказ
+            form(action="#" method="get").cart-info__form#promo-code
+              input.cart-info__input(type="text" placeholder="Введите промокод")
+              button.cart-info__btn(type="submit" form="promo-code") Применить
+            ul.cart-info__list
+              li.cart-info__item
+                p.cart-info__col Количество
+                span.cart-info__col 2 шт.
+              li.cart-info__item
+                p.cart-info__col Стоимость
+                span.cart-info__col.cart-info__col--bold 9 800 ₽
+              li.cart-info__item
+                p.cart-info__col Промокод
+                span.cart-info__col.cart-info__col--sale – 1 000 ₽
+              li.cart-info__item
+                p.cart-info__col Доставка
+                span.cart-info__col 0 ₽
+            ul.cart-info__total
+              li.cart-info__item
+                p.cart-info__col Итого
+                span.cart-info__col.cart-info__col--bold 8 800 ₽
+              li.cart-info__item
+                input.ordering__submit.disabled.cart-info__link.btn-background(type="submit" value="Оформить заказ" form="order-form" data-disabled)
+            label.ordering__label.ordering__label--check.proviso-js
+              input.ordering__input.visually-hidden(type="checkbox" fomr="order-form" data-required)
+              span.ordering__text.ordering__text--proviso Я согласен с <a class="ordering__link" href="#">условиями</a> обработки персональных данных
+                

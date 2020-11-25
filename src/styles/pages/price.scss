@@ -1,7 +1,16 @@
 .price{
+  @include w768 {
+    margin-bottom: 100px;
+  }
+  @include w480 {
+    margin-bottom: 84px;
+  }
   .mycontainer{
     display: flex;
     align-items: flex-start;
+    @include w480 {
+      flex-direction: column;
+    }
   }
   &-aside{
     position: sticky;
@@ -21,20 +30,43 @@
         color: #000000;
       }
     }
+    @include w768 {
+      flex: 0 0 272px;
+      margin-right: 44px;
+      padding: 28px 20px;
+    }
+    @include w480 {
+      flex: none;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 36px;
+    }
   }
   &-content{
     flex: 1;
+    @include w480 {
+      flex: none;
+      width: 100%;
+    }
   }
   &-category{
     &+&{
       margin-top: 96px;
-      padding-top: 96px;
-      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      //border-top: 1px solid rgba(0, 0, 0, 0.2);
+      @include w768 {
+        margin-top: 60px;
+      }
+      @include w480 {
+        margin-top: 52px;
+      }
     }
     &__title{
       margin-bottom: 10px;
       font-weight: 500;
       font-size: 20px;
+      @include w768 {
+        font-size: 16px;
+      }
     }
     &-row{
       display: flex;
@@ -50,12 +82,22 @@
       font-size: 18px;
       line-height: 150%;
       color: #7D7D7D;
+      @include w768 {
+        font-size: 14px;
+      }
     }
     &__price{
       font-weight: 500;
       font-size: 22px;
       line-height: 130%;
       color: #0D0D0D;
+      @include w768 {
+        font-size: 16px;
+      }
     }
   }
+}
+.price-aside__link--active {
+  font-weight: 600;
+  color: #496DC8;
 }

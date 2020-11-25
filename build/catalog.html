@@ -21,7 +21,8 @@
         </div>
       </div>
       <header class="header">
-        <div class="mycontainer"><a class="header__logo" href="main.html"><img src="assets/images/logo.png" alt=""></a>
+        <div class="mycontainer"><a class="header__logo" href="main.html"><img src="assets/images/logo.png" alt="Logo"></a>
+          <button class="header__toggle"><span class="header__toggle-middle"></span></button>
           <nav class="header-menu">
             <div class="header-menu-item header-menu-item_wrap"><a class="header-menu-item__link" href="#">Каталог</a>
               <div class="header-menu-item-list">
@@ -65,7 +66,7 @@
       <div class="content">
         <main class="catalog">
           <div class="mycontainer">
-            <form class="filter" action="#">
+            <form class="filter catalog-tab-cont-js" action="#" data-tab="tab-filter">
               <div class="filter__title">Фильтр</div>
               <div class="filter__search">
                 <label for="search"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,7 +175,8 @@
             <div class="catalog-content">
               <h1 class="h1title">Каталог</h1>
               <div class="catalog-top"><span>Найдено 24 варианта</span>
-                <form class="catalog-top-btns" action="#">
+                <div class="catalog__tabs catalog-tab"><a class="catalog-tab__link catalog-tab-js" href="#" data-tab="tab-filter">Фильтр</a><a class="catalog-tab__link catalog-tab-js" href="#" data-tab="tab-sort">Сортировка</a></div>
+                <form class="catalog-top-btns catalog-tab-cont-js" action="#" data-tab="tab-sort">
                   <label class="catalog-top__btn">
                     <input type="radio" name="sort" value="Сначала дороже"><span>Сначала дороже</span>
                   </label>
@@ -187,6 +189,18 @@
                   <label class="catalog-top__btn">
                     <input type="radio" name="sort" value="Высокий рейтинг"><span>Высокий рейтинг</span>
                   </label>
+                  <label class="catalog-top__btn catalog-top__btn--mobile">
+                    <input type="radio" name="sort" value="Сначала дороже"><span>Дороже</span>
+                  </label>
+                  <label class="catalog-top__btn catalog-top__btn--mobile">
+                    <input type="radio" name="sort" value="Сначала дешевле"><span>Дешевле</span>
+                  </label>
+                  <label class="catalog-top__btn catalog-top__btn--mobile">
+                    <input type="radio" name="sort" value="Популярно" checked><span>Популярно</span>
+                  </label>
+                  <label class="catalog-top__btn catalog-top__btn--mobile">
+                    <input type="radio" name="sort" value="Высокий рейтинг"><span>Высокий рейтинг</span>
+                  </label>
                 </form>
               </div>
               <div class="catalog-items"><a class="cards-item" href="#">
@@ -195,28 +209,28 @@
                   <div class="cards-item__title">Филлер PRINCESS Rich</div>
                   <div class="cards-item-bot">
                     <div class="cards-item-bot__price">4 900<span class="rub__icon">руб.</span></div>
-                    <div class="cards-item-bot__btn btn-background">В корзину </div>
+                    <div class="cards-item-bot__btn btn-background"> <span>В корзину </span></div>
                   </div></a><a class="cards-item" href="#">
                   <div class="cards-item-tags"><span class="cards-item-tags-tag cards-item-tags-tag_best">Бестселлер</span><span class="cards-item-tags-tag cards-item-tags-tag_action">Скидка 10%</span></div>
                   <div class="cards-item__img"><img src="assets/images/filler1.png" alt=""></div>
                   <div class="cards-item__title">Филлер PRINCESS Rich</div>
                   <div class="cards-item-bot">
                     <div class="cards-item-bot__price">4 900<span class="rub__icon">руб.</span></div>
-                    <div class="cards-item-bot__btn btn-background">В корзину </div>
+                    <div class="cards-item-bot__btn btn-background"> <span>В корзину </span></div>
                   </div></a><a class="cards-item" href="#">
                   <div class="cards-item-tags"><span class="cards-item-tags-tag cards-item-tags-tag_best">Бестселлер</span><span class="cards-item-tags-tag cards-item-tags-tag_action">Скидка 10%</span></div>
                   <div class="cards-item__img"><img src="assets/images/filler1.png" alt=""></div>
                   <div class="cards-item__title">Филлер PRINCESS Rich</div>
                   <div class="cards-item-bot">
                     <div class="cards-item-bot__price">4 900<span class="rub__icon">руб.</span></div>
-                    <div class="cards-item-bot__btn btn-background">В корзину </div>
+                    <div class="cards-item-bot__btn btn-background"> <span>В корзину </span></div>
                   </div></a><a class="cards-item" href="#">
                   <div class="cards-item-tags"><span class="cards-item-tags-tag cards-item-tags-tag_best">Бестселлер</span><span class="cards-item-tags-tag cards-item-tags-tag_action">Скидка 10%</span></div>
                   <div class="cards-item__img"><img src="assets/images/filler1.png" alt=""></div>
                   <div class="cards-item__title">Филлер PRINCESS Rich</div>
                   <div class="cards-item-bot">
                     <div class="cards-item-bot__price">4 900<span class="rub__icon">руб.</span></div>
-                    <div class="cards-item-bot__btn btn-background">В корзину </div>
+                    <div class="cards-item-bot__btn btn-background"> <span>В корзину </span></div>
                   </div></a></div><a class="catalog__more" href="#">Показать еще</a>
               <div class="catalog__empty">К сожалению, мы ничего не нашли по вашим критериям</div>
             </div>
@@ -232,7 +246,7 @@
         </section>
         <section class="guarantee">
           <div class="mycontainer">
-            <div class="title">Гарантия</div>
+            <div class="title h2title">Гарантия</div>
             <div class="guarantee-content">
               <div class="guarantee-col">
                 <p>Покупая средства индивидуальной защиты у нас вы можете быть уверенны в подлинности приобретаемой продукции. Мы закупаем товар только у добросоветных и проверенных производителей, которые дорожат своим именем и приобретённой репутацией </p>

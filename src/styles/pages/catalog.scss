@@ -4,6 +4,24 @@
   padding: 30px 24px 0;
   border-radius: 3px;
   background: #FBFBFB;
+  @include w768 {
+    flex: 0 0 208px;
+  }
+  @include w480 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex: 0 0 100%;
+    z-index: 1000;
+
+    &.active {
+      display: block;
+      box-shadow: 0 1200px 100px 1000px rgba(0,0,0,0.5);
+      top: 150px;
+    }
+  }
   &__title{
     margin-bottom: 36px;
     font-weight: 600;
@@ -116,6 +134,9 @@
         height: 1px;
         margin: 0 12px;
         background: #0D0D0D;
+        @include w768 {
+          flex: 0 0 5px;
+        }
       }
     }
     &-item{
@@ -184,6 +205,64 @@
   .mycontainer{
     display: flex;
     align-items: flex-start;
+    @include w480 {
+      position: relative;
+    }
+  }
+  .catalog-tab {
+    display: none;
+    @include w480 {
+      display: flex;
+      width: 100%;
+    }
+    &__link {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 11px 16px;
+      border: 1px solid #FFFFFF;
+      color: #9E9E9E;
+      text-align: center;
+      &:first-of-type {
+        border-radius: 3px 0px 0px 3px;
+        // margin-right: -1px;
+      }
+      &:last-of-type {
+        border-radius: 0px 3px 3px 0px;
+      }
+      &.active {
+        border-color:#496DC8;
+        color: #496DC8;
+      }
+      @include w480 {
+        font-size: 12px;
+      }
+    }
+    // &__label {
+    //   width: 100%;
+      
+
+    //   &:first-of-type span {
+    //     border-radius: 3px 0px 0px 3px;
+    //     margin-right: -1px;
+    //   }
+    //   &:last-of-type span {
+    //     border-radius: 0px 3px 3px 0px;
+    //   }
+    //   
+    // }
+    // &__text {
+    //   width: 100%;
+    //   padding: 11px 16px;
+    //   border: 1px solid #FFFFFF;
+    //   text-align: center;
+    //   color: #9E9E9E;
+    // }
+    // &__input:checked + span {
+    //   border-color:#496DC8;
+    //   color: #496DC8;
+    // }
   }
   &-content{
     flex: 1;
@@ -198,15 +277,33 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 28px;
+    @include w1024 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     > span{
       font-weight: 500;
       color: #9E9E9E;
+      @include w1024 {
+        margin-bottom: 24px;
+      }
     }
     &-btns{
       display: flex;
+      @include w480 {
+        display: none;
+
+        &.active {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 16px;
+        }
+      }
     }
     &__btn{
       cursor: pointer;
+      display: flex;
       input{
         display: none;
         &:checked + span{
@@ -214,6 +311,9 @@
           z-index: 2;
           color: #496DC8;
           border-color: #496DC8;
+          @include w480 {
+            border: none;
+          }
         }
       }
       span{
@@ -221,9 +321,20 @@
         font-weight: 500;
         color: #9E9E9E;
         border: 1px solid #FBFBFB;
+        @include w768 {
+          font-size: 12px;
+          padding: 7px 9px;
+        }
+        @include w480 {
+          border: none;
+          padding: 0;
+        }
       }
       &:not(:last-child){
         margin-right: -1px;
+        @include w480 {
+          margin: 0;
+        }
       }
       &:first-child span{
         border-radius: 3px 0px 0px 3px;
@@ -231,12 +342,28 @@
       &:last-child span{
         border-radius: 0px 3px 3px 0px;
       }
+      @include w480 {
+        display: none;
+      }
+    }
+    &__btn--mobile {
+      display: none;
+      @include w480 {
+        display: block;
+      }
     }
   }
   &-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
+    @include w1024 {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
+    }
+    @include w359 {
+      grid-template-columns: 1fr;
+    }
   }
   &__more{
     margin-top: 24px; 
@@ -258,14 +385,26 @@
 .guarantee{
   margin-top: -68px;
   margin-bottom: 92px;
+  @include w768 {
+    margin-top: -20px;
+    margin-bottom: 72px;
+  }
   &-content{
     display: flex;
     justify-content: space-between;
+    @include w768 {
+      flex-direction: column;
+    }
   }
   &-col{
     flex: 0 0 46%;
     font-weight: 500;
     line-height: 130%;
     color: #7D7D7D;
+    @include w768 {
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }

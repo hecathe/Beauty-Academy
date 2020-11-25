@@ -6,7 +6,7 @@ block variables
 block content
   main.catalog
     .mycontainer
-      form.filter(action="#")
+      form.filter.catalog-tab-cont-js(action="#" data-tab="tab-filter")
         .filter__title Фильтр
         .filter__search
           label(for="search")
@@ -126,7 +126,10 @@ block content
         h1.h1title Каталог
         .catalog-top
           span Найдено 24 варианта
-          form.catalog-top-btns(action="#")
+          .catalog__tabs.catalog-tab
+            a.catalog-tab__link.catalog-tab-js(href="#" data-tab="tab-filter") Фильтр
+            a.catalog-tab__link.catalog-tab-js(href="#" data-tab="tab-sort") Сортировка
+          form.catalog-top-btns.catalog-tab-cont-js(action="#" data-tab="tab-sort")
             label.catalog-top__btn
               input(type="radio" name="sort" value="Сначала дороже")
               span Сначала дороже
@@ -137,6 +140,19 @@ block content
               input(type="radio" name="sort" value="Популярно" checked)
               span Популярно
             label.catalog-top__btn
+              input(type="radio" name="sort" value="Высокий рейтинг")
+              span Высокий рейтинг
+              
+            label.catalog-top__btn.catalog-top__btn--mobile
+              input(type="radio" name="sort" value="Сначала дороже")
+              span Дороже
+            label.catalog-top__btn.catalog-top__btn--mobile
+              input(type="radio" name="sort" value="Сначала дешевле")
+              span Дешевле
+            label.catalog-top__btn.catalog-top__btn--mobile
+              input(type="radio" name="sort" value="Популярно" checked)
+              span Популярно
+            label.catalog-top__btn.catalog-top__btn--mobile
               input(type="radio" name="sort" value="Высокий рейтинг")
               span Высокий рейтинг
         .catalog-items
@@ -160,7 +176,7 @@ block content
 
   section.guarantee
     .mycontainer
-      .title Гарантия
+      .title.h2title Гарантия
       .guarantee-content
         .guarantee-col
           p Покупая средства индивидуальной защиты у нас вы можете быть уверенны в подлинности приобретаемой продукции. Мы закупаем товар только у добросоветных и проверенных производителей, которые дорожат своим именем и приобретённой репутацией 

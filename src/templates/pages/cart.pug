@@ -1,0 +1,105 @@
+extends ../template
+
+block variables
+  - var title = 'Корзина'
+
+block content
+  main.cart.margin-block
+    .mycontainer
+      h1.h1title Корзина
+      section.cart
+        ul.cart__list
+          li.cart__item
+            .cart__wrap
+              img.cart__img(src="assets/images/filler-1.png", alt="Филлер PRINCESS Rich")
+            .cart__wrap
+              h4.cart__title Филлер PRINCESS Rich
+            .cart__wrap.cart__wrap--btns
+              button.cart__btn.cart__btn--del(type="button") 
+                <svg width="10" height="1" viewBox="0 0 10 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="4.37113e-08" y1="0.5" x2="10" y2="0.500001" stroke="#7D7D7D" stroke-opacity="0.6"/>
+                </svg>
+              span.cart__quantity 1
+              button.cart__btn.cart__btn--add(type="button")
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6H12M6 0L6 12" stroke="#7D7D7D"/>
+                </svg>
+            .cart__price-list
+              .cart__price-wrap
+                span.cart__price 4 900 ₽
+              .cart__price-wrap
+                span.cart__old-price 5 900 ₽
+            .cart__wrap
+              button.cart__btn.cart__btn--del-item(type="button")
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 1L1 16M1 1L16 16" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+          li.cart__item
+            .cart__wrap
+              img.cart__img(src="assets/images/filler3.png", alt="Филлер PRINCESS Rich Fich Mich")
+            .cart__wrap
+              h4.cart__title Филлер PRINCESS Rich Fich Mich
+            .cart__wrap.cart__wrap--btns
+              button.cart__btn.cart__btn--del(type="button")
+                <svg width="10" height="1" viewBox="0 0 10 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="4.37113e-08" y1="0.5" x2="10" y2="0.500001" stroke="#7D7D7D" stroke-opacity="0.6"/>
+                </svg>
+              span.cart__quantity 1
+              button.cart__btn.cart__btn--add(type="button")
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6H12M6 0L6 12" stroke="#7D7D7D"/>
+                </svg>
+            .cart__price-list
+              .cart__price-wrap
+                span.cart__price 4 900 ₽
+              //- .cart__price-wrap
+              //-   span.cart__old-price 5 900 ₽
+            .cart__wrap
+              button.cart__btn.cart__btn--del-item(type="button")
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 1L1 16M1 1L16 16" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+        .cart__info.cart-info
+            h4.cart-info__title Ваш заказ
+            form(action="#" method="get").cart-info__form
+              input.cart-info__input(type="text" placeholder="Введите промокод")
+              button.cart-info__btn(type="submit") Применить
+            ul.cart-info__list
+              li.cart-info__item
+                p.cart-info__col Количество
+                span.cart-info__col 2 шт.
+              li.cart-info__item
+                p.cart-info__col Стоимость
+                span.cart-info__col.cart-info__col--bold 9 800 ₽
+              li.cart-info__item
+                p.cart-info__col Промокод
+                span.cart-info__col.cart-info__col--sale – 1 000 ₽
+              li.cart-info__item
+                p.cart-info__col Доставка
+                span.cart-info__col 0 ₽
+            ul.cart-info__total
+              li.cart-info__item
+                p.cart-info__col Итого
+                span.cart-info__col.cart-info__col--bold 8 800 ₽
+              li.cart-info__item
+                a.cart-info__link.btn-background(href="#") Перейти к оформлению
+
+      section.cards.margin-block.slider4
+        .cards-top
+          .h2title Вас может заинтересовать
+        .cards-items-wrap
+          .cards-items.swiper-container
+            .cards-wrap.swiper-wrapper
+              .cards-item-wrap.swiper-slide
+                include ../common/cards-item.pug
+              .cards-item-wrap.swiper-slide
+                include ../common/cards-item.pug
+              .cards-item-wrap.swiper-slide
+                include ../common/cards-item.pug
+              .cards-item-wrap.swiper-slide
+                include ../common/cards-item.pug
+              .cards-item-wrap.swiper-slide
+                include ../common/cards-item.pug
+          .swiper-button-next
+          .swiper-button-prev

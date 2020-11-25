@@ -1,6 +1,9 @@
 .footer{
   background: rgba(0, 0, 0, 0.04);
   padding: 32px 0;
+  @include w480 {
+    padding: 24px 0 16px;
+  }
   &-row{
     display: flex;
     justify-content: space-between;
@@ -8,11 +11,68 @@
       margin-top: 20px;
       padding-top: 12px;
       border-top: 1px solid rgba(0, 0, 0, 0.2);
+      @include w480 {
+        margin-top: 36px;
+      }
+    }
+    &:first-of-type {
+      @include w768 {
+        position: relative;
+        display: grid;
+        grid-template-columns: max-content 1fr 3fr;
+        column-gap: 60px;
+      }
+      @include w480 {
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: 1fr max-content;
+      }
     }
   }
   &-col{
     &:last-child{
       flex: 0 0 40%
+    }
+    &:nth-of-type(2) {
+      @include w768 {
+        position: absolute;
+        top: 24px;
+      }
+      @include w480 {
+        top: 91%;
+      }
+      @include w359 {
+        top: 93%;
+      }
+    }
+    @include w768 {
+      &:first-of-type .footer__title,
+      &:nth-of-type(2) .footer__title {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 6px;
+          height: 3px;
+          top: 7px;
+          right: -10px;
+          background-image: url('../images/icon-polygon.svg');
+          background-repeat: no-repeat;
+          background-position: 0 0;
+        }
+      }
+    }
+    @include w480 {
+      &:nth-of-type(3) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30%;
+        row-gap: 16px;
+      }
+      &:last-of-type {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+      }
     }
   }
   &__title{
@@ -20,10 +80,16 @@
     color: #0D0D0D;
     &+&{
       margin-top: 8px;
+      @include w480 {
+        margin-top: 0;
+      }
     }
   }
   &-links{
     margin-top: 16px;
+    @include w768 {
+      display: none;
+    }
   }
   &__link{
     font-weight: 500;
@@ -36,6 +102,9 @@
     display: flex;
     margin-top: 16px;
     margin-bottom: 44px;
+    @include w359 {
+      flex-direction: column;
+    }
     input{
       flex: 1;
       background: #FBFBFB;
@@ -48,12 +117,32 @@
       &::placeholder{
         color: #B5B5B5;
       }
+      @include w480 {
+        font-size: 12px;
+      }
+      @include w359 {
+        flex: none;
+      }
     }
     button{
       border: none;
       flex: 0 0 200px;
       margin-left: 24px;
       cursor: pointer;
+
+      @include w1024 {
+        flex: 0 0 131px;
+      }
+      @include w480 {
+        font-size: 12px;
+        margin-left: 10px;
+      }
+      @include w359 {
+        flex: none;
+        margin-left: 0;
+        margin-top: 12px;
+        height: 33px;
+      }
     }
   }
   &__email{
@@ -66,6 +155,9 @@
       display: inline-block;
       font-weight: 600;
     }
+    @include w480 {
+      display: none;
+    }
   }
   &__text{
     font-weight: 500;
@@ -74,6 +166,9 @@
       display: inline-block;
       font-weight: 600;
       color: #0D0D0D;
+    }
+    @include w480 {
+      font-size: 12px;
     }
   }
 }

@@ -19,7 +19,7 @@ document.querySelectorAll('.slider-banner').forEach(item => {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    }
+    },
   });
 });
 /*Баннер на главной Конец*/
@@ -35,7 +35,24 @@ document.querySelectorAll('.slider4 .cards-items').forEach(item => {
     navigation: {
       nextEl: item.parentNode.querySelector('.swiper-button-next'),
       prevEl: item.parentNode.querySelector('.swiper-button-prev'),
-    }
+    },
+    breakpoints: {
+      1080: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      360: {
+        slidesPerView: 1.5,
+        spaceBetween: 12,
+      },
+      280: {
+        slidesPerView: 1,
+        spaceBetween: 12,
+      }
+    },
   });
 });
 /*Слайдер с 4  элементами Конец*/
@@ -149,3 +166,49 @@ if (document.querySelectorAll('.popup__overlay').length) {
   };
 }
 /*Закрытие попапа Конец*/
+
+/*Select polygon*/
+function selectTransform() {
+  let selects = document.querySelectorAll('.ordering__select-wrap');
+
+  for(let select of selects) {
+    if(select) {
+      select.addEventListener('focusin', function(event){
+        select.classList.add('active');
+      });
+      select.addEventListener('focusout', function(event){
+          select.classList.remove('active');
+      });
+    }
+  }
+}
+selectTransform();
+/*Select polygon end*/
+
+/*checkbox*/
+if (document.querySelectorAll('.proviso-js').length) {
+  let condition = document.querySelector('.proviso-js .ordering__input');
+  let submitBtn = document.querySelector('.ordering__submit');
+
+  submitBtn.addEventListener('click', function(){
+    if(!condition.checked) {
+      event.preventDefault();
+      submitBtn.classList.add('disabled');
+    } else {
+      submitBtn.classList.remove('disabled');
+    }
+  });
+}
+/*checkbox end*/
+
+/*header toggle*/
+if (document.querySelectorAll('.header__toggle').length) {
+  let headerToggle = document.querySelector('.header__toggle');
+  let headerMenu = document.querySelector('.header-menu');
+
+  headerToggle.addEventListener('click', function(){
+    headerToggle.classList.toggle('active');
+    headerMenu.classList.toggle('active');
+  });
+}
+/*header toggle end */

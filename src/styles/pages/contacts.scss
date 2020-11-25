@@ -1,11 +1,32 @@
 .contacts{
+  @include w768 {
+    margin-top: 8px;
+    margin-bottom: 100px;
+  }
+  @include w480 {
+    margin-bottom: 84px;
+  }
   .mycontainer{
     display: flex;
+    @include w768 {
+      flex-direction: column;
+    }
   }
   &-col{
     flex: 0 0 50%;
     &:first-child{
       flex: 0 0 42%;
+      @include w768 {
+        margin-bottom: 68px;
+      }
+    }
+  }
+  &-form {
+    @include w768 {
+      width: 495px;
+    }
+    @include w480 {
+      width: 100%;
     }
   }
   &__subtitle{
@@ -20,6 +41,9 @@
     line-height: 130%;
     letter-spacing: 0.01em;
     color: #7D7D7D;
+    @include w768 {
+      font-size: 14px;
+    }
   }
 }
 
@@ -29,6 +53,9 @@
   flex-wrap: wrap;
   &+&{
     margin-top: 52px;
+    @include w480 {
+      margin-top: 68px;
+    }
   }
   &.recover{
     max-width: 456px;
@@ -43,8 +70,20 @@
     .general-bottomBlock{
       button{
         width: auto;
+        @include w480 {
+          width: 100%;
+          margin-top: 20px;
+        }
       }
     }
+    @include w480 {
+      max-width: 100%;
+      align-items: stretch;
+    }
+  }
+  @include w480 {
+    max-width: 100%;
+    flex-direction: column;
   }
   .general-itemInput{
     position: relative;
@@ -54,12 +93,21 @@
     width: 100%;
     &.general-itemInput_25{
       width: calc(100% / 4 - (72px / 4));
+      @include w480 {
+        width: 100%;
+      }
     }
     &.general-itemInput_33{
       width: calc(100% / 3 - (48px / 3));
+      @include w480 {
+        width: 100%;
+      }
     }
     &.general-itemInput_50{
       width: calc(100% / 2 - (24px / 2));
+      @include w480 {
+        width: 100%;
+      }
     }
     > span{
       display: inline-block;
@@ -67,6 +115,9 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 120%;
+      @include w768 {
+        font-size: 14px;
+      }
       &.input-pass{
         position: absolute;
         right: 12px;
@@ -86,6 +137,12 @@
         line-height: 19px;
         color: #7D7D7D;
         border-bottom: 1px solid #7D7D7D;
+        @include w768 {
+          font-size: 14px;
+        }
+        @include w480 {
+          font-size: 12px;
+        }
       }
     }
     &__input{
@@ -99,6 +156,9 @@
       &::placeholder{
         color: #7D7D7D;
       }
+      @include w768 {
+        font-size: 14px;
+      }
     }
     textarea{
       padding-top: 10px;
@@ -108,11 +168,22 @@
   }
   .general-bottomBlock{
     margin-left: auto;
+    @include w480 {
+      margin: 0;
+    }
     button{
-      width: 200px;
+      max-width: 200px;
       padding: 8px 24px;
       border: none;
       cursor: pointer;
+      @include w768 {
+        font-size: 12px;
+      }
+      @include w480 {
+        max-width: 100%;
+        width: 100%;
+        padding: 12px 60px;
+      }
     }
   }
 }

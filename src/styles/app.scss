@@ -1,16 +1,28 @@
 @import 'common/normalize';
 @import 'common/adaptive';
 
+html {
+  overflow-x: hidden;
+}
 body{
   font-family: 'Gilroy';
   font-size: 14px;
   background: #F5F5F5;
+  overflow-x: hidden;
   &.fixed{
 		overflow: hidden;
 		@include hover{
 			padding-right: 17px;
 		}
 	}
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -26,7 +38,10 @@ body{
 .mycontainer{
 	max-width: 1360px;
 	padding: 0 20px;
-	margin: 0 auto;
+  margin: 0 auto;
+  @include w768 {
+    max-width: 708px;
+  }
 }
 
 .rub__icon{
@@ -47,6 +62,12 @@ body{
 
 .margin-block{
   margin-bottom: 160px;
+  @include w768 {
+    margin-bottom: 68px;
+  }
+  @include w480 {
+    margin-bottom: 52px;
+  }
 }
 
 .h1title{
@@ -55,10 +76,22 @@ body{
   line-height: 130%;
   color: #0D0D0D;
   margin-bottom: 30px;
+  @include w768 {
+    font-size: 22px;
+  }
+  @include w480 {
+    font-size: 20px;
+  }
 } 
 
 .lk .h1title{
   font-size: 36px;
+  @include w768 {
+    font-size: 22px;
+  }
+  @include w480 {
+    font-size: 20px;
+  }
 }
 
 .h2title{
@@ -67,6 +100,13 @@ body{
   font-size: 30px;
   line-height: 130%;
   margin-bottom: 24px;
+  @include w768 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  @include w480 {
+    font-size: 16px;
+  }
 }
 
 .btn-background{
@@ -86,6 +126,19 @@ body{
       background: #46854D;
     }
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 input{
@@ -112,4 +165,6 @@ input{
 @import 'pages/contacts';
 @import 'pages/price';
 @import 'pages/lk';
-
+@import 'pages/cart';
+@import 'pages/ordering';
+@import 'pages/purchase';

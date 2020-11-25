@@ -1,0 +1,33 @@
+.purchase .mycontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.purchase__wrap {
+    margin-top: 115px;
+}
+.purchase__text {
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    @include w768 {
+        font-size: 12px;
+    }
+}
+.purchase__link {
+    font-size: 12px;
+    line-height: 130%;
+    color: #496DC8;
+    margin-top: 12px;
+
+    svg {
+        fill: #496DC8;
+        margin-right: 8px;
+    }
+    &:hover {
+        color: #2248A8;
+    }
+    &:hover svg {
+        fill: #2248A8;
+    }
+}

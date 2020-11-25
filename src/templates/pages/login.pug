@@ -1,13 +1,13 @@
 extends ../template
 
 block variables
-  - var title = 'Вход'
+  - var title = 'Авторизация'
 
 block content
-  main.lk.margin-block
+  main.lk.lk-authorization.margin-block
     .mycontainer
       .lk__info Добро пожаловать!
-      h1.h1title Вход
+      h1.h1title Авторизация
       .lk-navigation
         a.lk-navigation__item.active(href="#") Войти
         a.lk-navigation__item(href="#") Регистрация
@@ -24,7 +24,7 @@ block content
                 span.input-pass
                 a.recovery(href="#") Забыли пароль?
               .general-bottomBlock
-                button.general__btn.btn-background(type="submit") Зарегистрироваться
+                button.general__btn.btn-background(type="submit") Войти
 
           .lk-content-col 
             .lk-content__text Нет аккаунта?
