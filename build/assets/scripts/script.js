@@ -167,7 +167,7 @@ if (document.querySelectorAll('.popup__overlay').length) {
 }
 /*Закрытие попапа Конец*/
 
-/*Select polygon*/
+/*Select polygon на странице оформления заказа, возможно не нужен*/
 function selectTransform() {
   let selects = document.querySelectorAll('.ordering__select-wrap');
 
@@ -194,8 +194,13 @@ if (document.querySelectorAll('.proviso-js').length) {
     if(condition.checked) {
       submitBtn.classList.remove('disabled');
     } else {
-      event.preventDefault();
       submitBtn.classList.add('disabled');
+    }
+  });
+
+  submitBtn.addEventListener('submit', function(){
+    if(submitBtn.classList.contains('disabled')) {
+      event.preventDefault();
     }
   });
 }
@@ -217,13 +222,48 @@ if (document.querySelectorAll('.header__toggle').length) {
 if(document.querySelectorAll('.header-menu-item_catalog').length) {
   let link = document.querySelector('.header-menu-item_catalog');
   link.addEventListener('click', function(){
-    link.classList.toggle('active');
+    if(screen.width >= 767) {
+      link.classList.toggle('active');
+    }
+  });
+  link.addEventListener('focusout', function(){
+    link.classList.remove('active');
   });
 }
 if(document.querySelectorAll('.header-menu-item_fillers').length) {
   let link = document.querySelector('.header-menu-item_fillers');
   link.addEventListener('click', function(){
-    link.classList.toggle('active');
+    if(screen.width >= 767) {
+      link.classList.toggle('active');
+    }
+  });
+  link.addEventListener('focusout', function(){
+    link.classList.remove('active');
   });
 }
 /*header link end*/
+
+/*Filter or sort*/
+if(document.querySelectorAll('.catalog-tab__link--filter').length) {
+  let tabFilter = document.querySelector('.catalog-tab__link--filter');
+  let filter = document.querySelector('.filter');
+  tabFilter.addEventListener('click', function(){
+    event.preventDefault();
+    filter.classList.toggle('active');
+  });
+  filter.addEventListener('focusout', function(){
+    filter.classList.remove('active');
+  });
+}
+if(document.querySelectorAll('.catalog-tab__link--sort').length) {
+  let tabSort = document.querySelector('.catalog-tab__link--sort');
+  let sort = document.querySelector('.catalog-top-btns')
+  tabSort.addEventListener('click', function(){
+    event.preventDefault();
+    sort.classList.toggle('active');
+  });
+  sort.addEventListener('focusout', function(){
+    sort.classList.remove('active');
+  });
+}
+/*Filter or sort end*/

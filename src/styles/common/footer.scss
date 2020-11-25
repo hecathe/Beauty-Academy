@@ -44,24 +44,6 @@
         top: 93%;
       }
     }
-    @include w768 {
-      &:first-of-type .footer__title,
-      &:nth-of-type(2) .footer__title {
-        position: relative;
-
-        &::after {
-          position: absolute;
-          content: '';
-          width: 6px;
-          height: 3px;
-          top: 7px;
-          right: -10px;
-          background-image: url('../images/icon-polygon.svg');
-          background-repeat: no-repeat;
-          background-position: 0 0;
-        }
-      }
-    }
     @include w480 {
       &:nth-of-type(3) {
         display: grid;

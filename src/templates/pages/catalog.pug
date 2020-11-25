@@ -6,7 +6,7 @@ block variables
 block content
   main.catalog
     .mycontainer
-      form.filter.catalog-tab-cont-js(action="#" data-tab="tab-filter")
+      form.filter.catalog-tab-cont-js(action="#" data-tab="tab-filter")#tab-filter
         .filter__title Фильтр
         .filter__search
           label(for="search")
@@ -127,9 +127,9 @@ block content
         .catalog-top
           span Найдено 24 варианта
           .catalog__tabs.catalog-tab
-            a.catalog-tab__link.catalog-tab-js(href="#" data-tab="tab-filter") Фильтр
-            a.catalog-tab__link.catalog-tab-js(href="#" data-tab="tab-sort") Сортировка
-          form.catalog-top-btns.catalog-tab-cont-js(action="#" data-tab="tab-sort")
+            a.catalog-tab__link.catalog-tab__link--filter.catalog-tab-js(href="#" data-tab="tab-filter") Фильтр
+            a.catalog-tab__link.catalog-tab__link--sort.catalog-tab-js(href="#tab-sort" data-tab="tab-sort") Сортировка
+          form.catalog-top-btns.catalog-tab-cont-js(action="#" data-tab="tab-sort")#tab-sort
             label.catalog-top__btn
               input(type="radio" name="sort" value="Сначала дороже")
               span Сначала дороже
@@ -142,19 +142,19 @@ block content
             label.catalog-top__btn
               input(type="radio" name="sort" value="Высокий рейтинг")
               span Высокий рейтинг
-              
-            label.catalog-top__btn.catalog-top__btn--mobile
-              input(type="radio" name="sort" value="Сначала дороже")
-              span Дороже
-            label.catalog-top__btn.catalog-top__btn--mobile
-              input(type="radio" name="sort" value="Сначала дешевле")
-              span Дешевле
-            label.catalog-top__btn.catalog-top__btn--mobile
-              input(type="radio" name="sort" value="Популярно" checked)
-              span Популярно
-            label.catalog-top__btn.catalog-top__btn--mobile
-              input(type="radio" name="sort" value="Высокий рейтинг")
-              span Высокий рейтинг
+            .catalog-top--mobile
+              label.catalog-top__btn.catalog-top__btn--mobile
+                input(type="radio" name="sort" value="Сначала дороже")
+                span Дороже
+              label.catalog-top__btn.catalog-top__btn--mobile
+                input(type="radio" name="sort" value="Сначала дешевле")
+                span Дешевле
+              label.catalog-top__btn.catalog-top__btn--mobile
+                input(type="radio" name="sort" value="Популярно" checked)
+                span Популярно
+              label.catalog-top__btn.catalog-top__btn--mobile
+                input(type="radio" name="sort" value="Высокий рейтинг")
+                span Высокий рейтинг
         .catalog-items
           include ../common/cards-item.pug
           include ../common/cards-item.pug

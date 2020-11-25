@@ -139,6 +139,9 @@
           transform: rotate(-180deg);
           transition: 0.2s;
         }
+        @include w480 {
+          display: none;
+        }
       }
       @include w1024 {
         &.active {
@@ -148,7 +151,6 @@
           }
           .header-menu-item-list {
             transform: none;
-            left: -180%;
           }
           .header-menu-item-list{
             transform: none;
@@ -181,6 +183,18 @@
           content: '';
           @include w480 {
             display: none;
+          }
+        }
+      }
+      &_catalog {
+        @include w768 {
+          .header-menu-item-list {
+            left: -180%;
+          }
+          &:hover {
+            .header-menu-item-list {
+              left: -180%;
+            }
           }
         }
       }
@@ -310,10 +324,11 @@
       position: absolute;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      width: 90%;
       top: 100%;
-      left: 20px;
+      right: 0;
+      left: 0;
       padding: 20px;
+      margin: 0 20px;
       background-color: #FFFFFF;
       transform: translateY(-200%);
       transition: all 0.3s ease 0s;
@@ -361,6 +376,30 @@
           stroke: #46854D;
         }
       }
+      &_basket {
+        position: relative;
+        span {
+          position: absolute;
+          top: -3px;
+          left: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 22px;
+          height: 22px;
+          font-weight: 500;
+          color: #FFFFFF;
+          background-color: #46854D;
+          border-radius: 50%;
+          @include w480 {
+            font-size: 10px;
+            width: 15px;
+            height: 15px;
+            top: 2px;
+            left: 16px;
+          }
+        }
+      }
       @include hover{
         &:hover{
           svg path{
@@ -370,8 +409,22 @@
       }
       @include w768 {
         &_basket svg {
+          width: 18px;
+          height: 17px;
+        }
+        &_search svg {
           width: 16px;
-          height: 15px;
+          height: 16px;
+        }
+        &_lk svg {
+          width: 15px;
+          height: 17px;
+        }
+      }
+      @include w480 {
+        &_basket svg {
+          width: 15px;
+          height: 14px;
         }
         &_search svg {
           width: 14px;
@@ -382,36 +435,12 @@
           height: 15px;
         }
       }
-      @include w480 {
-        &_basket svg {
-          width: 13px;
-          height: 12px;
-        }
-        &_search svg {
-          width: 12px;
-          height: 12px;
-        }
-        &_lk svg {
-          width: 11px;
-          height: 13px;
-        }
-      }
     }
     @include w480 {
       z-index: 3;
     }
   }
 }
-// .header-menu-item_catalog::after {
-//   position: absolute;
-//   content: '';
-//   width: 3px;
-//   height: 6px;
-//   background-image: url('../images/icon-polygon.svg');
-//   background-repeat: no-repeat;
-//   background-position: 0 0;
-//   background-size: contain;
-// }
 
 .breadcrumbs{
   margin-top: 48px;
@@ -419,6 +448,7 @@
   .mycontainer{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   svg{
     margin: 0 8px;
@@ -427,6 +457,9 @@
     color: #B5B5B5;
   }
   &__item {
+    white-space: nowrap;
+    padding: 1px;
+    
     @include w768 {
       font-size: 14px;
     }

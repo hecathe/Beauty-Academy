@@ -9,6 +9,11 @@
 .ordering__wrap {
     width: 452px;
     margin-left: 24px;
+    .cart-info {
+        margin-bottom: 8px;
+        max-width: 100%;
+        width: 100%;
+    }
     .cart-info__form {
         display: flex;
     }
@@ -208,13 +213,6 @@
 }
 .ordering__label .ordering__input:checked + .ordering__text--proviso::after {
     top: 1px;
-}
-.ordering__wrap {
-    .cart-info {
-        margin-bottom: 8px;
-        max-width: 100%;
-        width: 100%;
-    }
 }
 .ordering__comment {
     width: 636px;

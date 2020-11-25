@@ -44,6 +44,7 @@
       font-weight: 500;
       color: #9E9E9E;
       transition: .1s;
+      white-space: nowrap;
       &:not(:first-child){
         margin-left: -1px;
       }

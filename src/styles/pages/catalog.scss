@@ -6,6 +6,7 @@
   background: #FBFBFB;
   @include w768 {
     flex: 0 0 208px;
+    padding: 20px 12px 0;
   }
   @include w480 {
     display: none;
@@ -13,12 +14,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    flex: 0 0 100%;
+    flex: none;
     z-index: 1000;
 
     &.active {
       display: block;
-      box-shadow: 0 1200px 100px 1000px rgba(0,0,0,0.5);
+      box-shadow: 0px 1003px 0px 1000px rgba(0,0,0,0.5);
       top: 150px;
     }
   }
@@ -26,6 +27,9 @@
     margin-bottom: 36px;
     font-weight: 600;
     font-size: 18px;
+    @include w768 {
+      margin-bottom: 24px;
+    }
   }
   &__search{
     position: relative;
@@ -43,12 +47,19 @@
       padding: 7px 0 7px 36px;
       font-weight: 500;
       background: #F5F5F5;
+
+      @include w768 {
+        font-size: 12px;
+      }
     }
   }
   &-category{
     display: flex;
     flex-direction: column;
     margin-bottom: 32px;
+    @include w768 {
+      margin-bottom: 28px;
+    }
     &__title{
       margin-bottom: 16px;
       display: flex;
@@ -127,6 +138,11 @@
           border: none;
           font-weight: 500;
           background: #F5F5F5;
+          @include w768 {
+            font-size: 12px;
+            padding-left: 30px;
+            padding-right: 6px;
+          }
         }
       }
       > span{
@@ -136,6 +152,7 @@
         background: #0D0D0D;
         @include w768 {
           flex: 0 0 5px;
+          margin: 0 6px;
         }
       }
     }
@@ -144,6 +161,7 @@
       align-items: flex-start;
       padding: 8px 0; 
       cursor: pointer;
+
       &:first-child{
         margin-top: -8px;
       }
@@ -183,6 +201,10 @@
         font-weight: 500;
         line-height: 19px;
         color: rgba(0, 0, 0, 0.6);
+
+        @include w768 {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -197,6 +219,10 @@
     text-align: center;
     background: #E0E2E9;
     cursor: pointer;
+    @include w480 {
+      width: calc(100% + 24px);
+      margin-left: -12px;
+    }
   }
 }
 
@@ -226,7 +252,6 @@
       text-align: center;
       &:first-of-type {
         border-radius: 3px 0px 0px 3px;
-        // margin-right: -1px;
       }
       &:last-of-type {
         border-radius: 0px 3px 3px 0px;
@@ -239,30 +264,6 @@
         font-size: 12px;
       }
     }
-    // &__label {
-    //   width: 100%;
-      
-
-    //   &:first-of-type span {
-    //     border-radius: 3px 0px 0px 3px;
-    //     margin-right: -1px;
-    //   }
-    //   &:last-of-type span {
-    //     border-radius: 0px 3px 3px 0px;
-    //   }
-    //   
-    // }
-    // &__text {
-    //   width: 100%;
-    //   padding: 11px 16px;
-    //   border: 1px solid #FFFFFF;
-    //   text-align: center;
-    //   color: #9E9E9E;
-    // }
-    // &__input:checked + span {
-    //   border-color:#496DC8;
-    //   color: #496DC8;
-    // }
   }
   &-content{
     flex: 1;
@@ -321,6 +322,7 @@
         font-weight: 500;
         color: #9E9E9E;
         border: 1px solid #FBFBFB;
+        white-space: nowrap;
         @include w768 {
           font-size: 12px;
           padding: 7px 9px;
@@ -339,7 +341,7 @@
       &:first-child span{
         border-radius: 3px 0px 0px 3px;
       }
-      &:last-child span{
+      &:last-of-type span{
         border-radius: 0px 3px 3px 0px;
       }
       @include w480 {
@@ -361,9 +363,38 @@
       grid-template-columns: 1fr 1fr;
       grid-gap: 16px;
     }
+    @include w480 {
+      .cards-item-tags-tag {
+        font-size: 8px;
+        padding: 5px;
+      }
+      .cards-item__img {
+        height: 114px;
+      }
+      .cards-item__title {
+        font-size: 12px;
+        margin-bottom: 16px;
+      }
+      .cards-item__price {
+        font-size: 14px;
+      }
+      .cards-item__btn {
+        width: 28px;
+        height: 18px;
+        padding: 5px 9px;
+
+        &::after {
+          width: 12px;
+          height: 12px;
+          top: 3px;
+          left: 7px;
+        }
+      }
+    }
     @include w359 {
       grid-template-columns: 1fr;
     }
+    
   }
   &__more{
     margin-top: 24px; 
@@ -379,6 +410,14 @@
     font-size: 16px;
     line-height: 120%;
     text-align: center;
+  }
+}
+.catalog-top--mobile {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  @include w480 {
+    display: flex;
   }
 }
 
