@@ -69,7 +69,14 @@
         line-height: 130%;
         color: #496DC8;
         svg{
+          fill: #496DC8;
           margin-right: 8px;
+        }
+        &:hover {
+          color: #2248A8;
+          svg {
+            fill: #2248A8;
+          }
         }
       }
     }
