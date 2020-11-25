@@ -190,15 +190,14 @@ if (document.querySelectorAll('.proviso-js').length) {
   let condition = document.querySelector('.proviso-js .ordering__input');
   let submitBtn = document.querySelector('.ordering__submit');
 
-  if(condition.checked) {
-    submitBtn.classList.remove('disabled');
-  } else {
-    event.preventDefault();
-    submitBtn.classList.add('disabled');
-  }
-  // condition.addEventListener('click', function(){
-    
-  // });
+  condition.addEventListener('change', function(){
+    if(condition.checked) {
+      submitBtn.classList.remove('disabled');
+    } else {
+      event.preventDefault();
+      submitBtn.classList.add('disabled');
+    }
+  });
 }
 /*checkbox end*/
 
