@@ -209,7 +209,7 @@
                 <div class="cart__info cart-info">
                   <h4 class="cart-info__title">Ваш заказ</h4>
                   <form class="cart-info__form" action="#" method="get" id="promo-code">
-                    <input class="cart-info__input" type="text" placeholder="Введите промокод">
+                    <input class="cart-info__input" type="text" placeholder="Введите промокод" data-required>
                     <button class="cart-info__btn" type="submit" form="promo-code">Применить</button>
                   </form>
                   <ul class="cart-info__list">
@@ -231,7 +231,7 @@
                       <p class="cart-info__col">Итого</p><span class="cart-info__col cart-info__col--bold">8 800 ₽</span>
                     </li>
                     <li class="cart-info__item">
-                      <input class="ordering__submit disabled cart-info__link btn-background" type="submit" value="Оформить заказ" form="order-form" data-disabled>
+                      <button class="ordering__submit disabled cart-info__link btn-background" type="submit" form="order-form" data-disabled>Оформить заказ</button>
                     </li>
                   </ul>
                   <label class="ordering__label ordering__label--check proviso-js">

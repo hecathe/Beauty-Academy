@@ -185,19 +185,20 @@ function selectTransform() {
 selectTransform();
 /*Select polygon end*/
 
-/*checkbox*/
+/*form checkbox*/
 if (document.querySelectorAll('.proviso-js').length) {
   let condition = document.querySelector('.proviso-js .ordering__input');
   let submitBtn = document.querySelector('.ordering__submit');
 
-  submitBtn.addEventListener('click', function(){
-    if(condition.checked) {
-      submitBtn.classList.remove('disabled');
-    } else {
-      event.preventDefault();
-      submitBtn.classList.add('disabled');
-    }
-  });
+  if(condition.checked) {
+    submitBtn.classList.remove('disabled');
+  } else {
+    event.preventDefault();
+    submitBtn.classList.add('disabled');
+  }
+  // condition.addEventListener('click', function(){
+    
+  // });
 }
 /*checkbox end*/
 

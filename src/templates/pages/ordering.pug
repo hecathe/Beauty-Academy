@@ -121,7 +121,7 @@ block content
           .cart__info.cart-info
             h4.cart-info__title Ваш заказ
             form(action="#" method="get").cart-info__form#promo-code
-              input.cart-info__input(type="text" placeholder="Введите промокод")
+              input.cart-info__input(type="text" placeholder="Введите промокод" data-required)
               button.cart-info__btn(type="submit" form="promo-code") Применить
             ul.cart-info__list
               li.cart-info__item
@@ -141,7 +141,7 @@ block content
                 p.cart-info__col Итого
                 span.cart-info__col.cart-info__col--bold 8 800 ₽
               li.cart-info__item
-                input.ordering__submit.disabled.cart-info__link.btn-background(type="submit" value="Оформить заказ" form="order-form" data-disabled)
+                button.ordering__submit.disabled.cart-info__link.btn-background(type="submit" form="order-form" data-disabled) Оформить заказ
             label.ordering__label.ordering__label--check.proviso-js
               input.ordering__input.visually-hidden(type="checkbox" fomr="order-form" data-required)
               span.ordering__text.ordering__text--proviso Я согласен с <a class="ordering__link" href="#">условиями</a> обработки персональных данных
