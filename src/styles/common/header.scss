@@ -31,7 +31,17 @@
     display: flex;
     align-items: center;
     @include w480 {
+      position: relative;
       padding: 20px 16px;
+      &::before {
+        position: absolute;
+        content: '';
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: 2;
+      }
     }
   }
   @include w480 {
@@ -47,6 +57,7 @@
     padding: 0;
     cursor: pointer;
     margin-right: 12px;
+    z-index: 3;
 
     &::before {
       position: absolute;
@@ -105,6 +116,7 @@
     }
     @include w480 {
       width: 66px;
+      z-index: 3;
     }
   }
   &-menu{
@@ -117,8 +129,43 @@
       line-height: 130%;
       transition: .1s;
       position: relative;
+
+      svg {
+        display: none;
+        @include w1024 {
+          display: block;
+          margin-left: 8px;
+          margin-top: 1px;
+          transform: rotate(-180deg);
+          transition: 0.2s;
+        }
+      }
+      @include w1024 {
+        &.active {
+          svg {
+            transform: rotate(0deg);
+            transition: 0.2s;
+          }
+          .header-menu-item-list {
+            transform: none;
+            left: -180%;
+          }
+          .header-menu-item-list{
+            transform: none;
+            &-links,
+            &-best{
+              transition: 0.3s;
+              transition-delay: 0.2s;
+              opacity: 1;
+            }
+          }
+        }
+      }
       &+&{
         margin-left: 24px;
+        @include w768 {
+          margin-left: 20px;
+        }
         @include w480 {
           margin-left: 0;
         }
@@ -139,6 +186,20 @@
       }
       &_fillers{
         color: #46854D;
+        .header-menu-item-list {
+          color: #000000;
+        }
+        @include w768 {
+          .header-menu-item-list {
+            left: -340%;
+          }
+          &:hover {
+            .header-menu-item-list {
+              left: -340%;
+            }
+          }
+        }
+        
       }
       @include hover{
         &:hover{
@@ -164,9 +225,6 @@
         &:not(:first-of-type) {
           display: none;
         }
-        .header-menu.active &:not(:first-of-type) {
-          display: block;
-        }
       }
       &__link{
         height: 100%;
@@ -182,12 +240,21 @@
         background: #fff;
         transform: translateY(-100%);
         transition: .3s;
+        @include w1024 {
+          left: -180%;
+        }
+        @include w480 {
+          transform: translateY(-200%);
+        }
         &-links{
           white-space: nowrap;
           margin-right: 100px;
           opacity: 0;
           transition: 0s;
           transition-delay: 0s;
+          @include w768 {
+            margin-right: 15px;
+          }
           &__link{
             line-height: 130%;
             letter-spacing: 0.01em;
@@ -203,9 +270,13 @@
           opacity: 0;
           transition: .2s;
           transition-delay: 0s;
+          @include w480 {
+            display: none;
+          }
           &__img{
             margin-right: 30px;
             height: 167px;
+            width: 69px;
             img{
               height: 100%;
             }
@@ -230,13 +301,32 @@
 
     @include w480 {
       flex-direction: column;
-      position: absolute;
-      top: 30%;
-      left: 30%;
-      // &.active {
-        
-      // }
+      z-index: 2;
     }
+  }
+  &-menu--mobile {
+    display: none;
+    @include w480 {
+      position: absolute;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 90%;
+      top: 100%;
+      left: 20px;
+      padding: 20px;
+      background-color: #FFFFFF;
+      transform: translateY(-200%);
+      transition: all 0.3s ease 0s;
+      z-index: -1;
+      .header-menu-item {
+        display: block;
+      }
+      .header-menu.active + & {
+        transform: none;
+        transition: all 0.3s ease 0s;
+      }
+    }
+    
   }
   &-info{
     display: flex;
@@ -307,8 +397,21 @@
         }
       }
     }
+    @include w480 {
+      z-index: 3;
+    }
   }
 }
+// .header-menu-item_catalog::after {
+//   position: absolute;
+//   content: '';
+//   width: 3px;
+//   height: 6px;
+//   background-image: url('../images/icon-polygon.svg');
+//   background-repeat: no-repeat;
+//   background-position: 0 0;
+//   background-size: contain;
+// }
 
 .breadcrumbs{
   margin-top: 48px;

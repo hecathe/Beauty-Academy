@@ -9,8 +9,11 @@ header.header
     button.header__toggle
       span.header__toggle-middle
     nav.header-menu
-      .header-menu-item.header-menu-item_wrap
+      .header-menu-item.header-menu-item_wrap.header-menu-item_catalog
         a.header-menu-item__link(href="#") Каталог
+          <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 4L4 1L1 4" stroke="black"/>
+          </svg>
         .header-menu-item-list
           .header-menu-item-list-links
             a.header-menu-item-list-links__link(href="#") Средства индивидуальной защиты
@@ -33,12 +36,45 @@ header.header
         a.header-menu-item__link(href="#") О нас
       .header-menu-item.header-menu-item_fillers
         a.header-menu-item__link(href="#") Филлеры
+          <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 4L4 1L1 4" stroke="#46854D"/>
+          </svg>
+        .header-menu-item-list
+          .header-menu-item-list-links
+            a.header-menu-item-list-links__link(href="#") Средства индивидуальной защиты
+            a.header-menu-item-list-links__link(href="#") Шапочки одноразовые
+            a.header-menu-item-list-links__link(href="#") Антисептики и дезинфекторы
+            a.header-menu-item-list-links__link(href="#") Халаты одноразовые
+            a.header-menu-item-list-links__link(href="#") Маски одноразовые
+            a.header-menu-item-list-links__link(href="#") Бахилы
+            a.header-menu-item-list-links__link(href="#") Перчатки одноразовые
+            a.header-menu-item-list-links__link(href="#" style="font-weight:600") Посмотреть все
+          .header-menu-item-list-best
+            .header-menu-item-list-best__img
+              img(src="assets/images/filler1.png", alt="")
+            .header-menu-item-list-best-info
+              .header-menu-item-list-best-info__title Филлер PRINCESS Rich
+              .header-menu-item-list-best-info__price 4 900
+                span.rub__icon руб.
+              a.header-menu-item-list-best-info__btn.btn-background(href="#") Добавить в корзину
+
       .header-menu-item
         a.header-menu-item__link(href="#") Цены
       .header-menu-item
         a.header-menu-item__link(href="#") Акции
       .header-menu-item
         a.header-menu-item__link(href="#") Контакты
+    .header-menu--mobile
+        .header-menu-item.header-menu-item_active
+          a.header-menu-item__link(href="#") О нас
+        .header-menu-item.header-menu-item_fillers
+          a.header-menu-item__link(href="#") Филлеры
+        .header-menu-item
+          a.header-menu-item__link(href="#") Цены
+        .header-menu-item
+          a.header-menu-item__link(href="#") Акции
+        .header-menu-item
+          a.header-menu-item__link(href="#") Контакты
     .header-info
       a.header-info__mail(href="mailto:admin@beatu-guard.ru") admin@beatu-guard.ru
       a.header-info__icon.header-info__icon_basket(href="#") 

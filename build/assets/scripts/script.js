@@ -212,3 +212,18 @@ if (document.querySelectorAll('.header__toggle').length) {
   });
 }
 /*header toggle end */
+
+/*header link*/
+if(document.querySelectorAll('.header-menu-item_catalog').length) {
+  let link = document.querySelector('.header-menu-item_catalog');
+  link.addEventListener('click', function(){
+    link.classList.toggle('active');
+  });
+}
+if(document.querySelectorAll('.header-menu-item_fillers').length) {
+  let link = document.querySelector('.header-menu-item_fillers');
+  link.addEventListener('click', function(){
+    link.classList.toggle('active');
+  });
+}
+/*header link end*/
