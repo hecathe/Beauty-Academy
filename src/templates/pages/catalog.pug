@@ -6,7 +6,7 @@ block variables
 block content
   main.catalog
     .mycontainer
-      form.filter.catalog-tab-cont-js(action="#" data-tab="tab-filter")#tab-filter
+      form.filter(action="#" data-item-tab="tab-filter")#tab-filter
         .filter__title Фильтр
         .filter__search
           label(for="search")
@@ -127,9 +127,9 @@ block content
         .catalog-top
           span Найдено 24 варианта
           .catalog__tabs.catalog-tab
-            a.catalog-tab__link.catalog-tab__link--filter.catalog-tab-js(href="#" data-tab="tab-filter") Фильтр
-            a.catalog-tab__link.catalog-tab__link--sort.catalog-tab-js(href="#tab-sort" data-tab="tab-sort") Сортировка
-          form.catalog-top-btns.catalog-tab-cont-js(action="#" data-tab="tab-sort")#tab-sort
+            a.catalog-tab__link.catalog-tab__link--filter(href="#" data-btn-tab="tab-filter") Фильтр
+            a.catalog-tab__link.catalog-tab__link--sort(href="#" data-btn-tab="tab-sort") Сортировка
+          form.catalog-top-btns(action="#" data-item-tab="tab-sort")#tab-sort
             label.catalog-top__btn
               input(type="radio" name="sort" value="Сначала дороже")
               span Сначала дороже
