@@ -127,8 +127,12 @@ block content
         .catalog-top
           span Найдено 24 варианта
           .catalog__tabs.catalog-tab
-            a.catalog-tab__link.catalog-tab__link--filter(href="#" data-btn-tab="tab-filter") Фильтр
-            a.catalog-tab__link.catalog-tab__link--sort(href="#" data-btn-tab="tab-sort") Сортировка
+            label.catalog-tab__label
+              input.catalog-tab__input.visually-hidden(type="radio" name="catalog-tab" value="filter" data-btn-tab="tab-filter")
+              span.catalog-tab__text Фильтр
+            label.catalog-tab__label
+              input.catalog-tab__input.visually-hidden(type="radio" name="catalog-tab" value="sort" data-btn-tab="tab-sort")
+              span.catalog-tab__text Сортировка
           form.catalog-top-btns(action="#" data-item-tab="tab-sort")#tab-sort
             label.catalog-top__btn
               input(type="radio" name="sort" value="Сначала дороже")

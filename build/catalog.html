@@ -199,7 +199,14 @@
             <div class="catalog-content">
               <h1 class="h1title">Каталог</h1>
               <div class="catalog-top"><span>Найдено 24 варианта</span>
-                <div class="catalog__tabs catalog-tab"><a class="catalog-tab__link catalog-tab__link--filter" href="#" data-btn-tab="tab-filter">Фильтр</a><a class="catalog-tab__link catalog-tab__link--sort" href="#" data-btn-tab="tab-sort">Сортировка</a></div>
+                <div class="catalog__tabs catalog-tab">
+                  <label class="catalog-tab__label">
+                    <input class="catalog-tab__input visually-hidden" type="radio" name="catalog-tab" value="filter" data-btn-tab="tab-filter"><span class="catalog-tab__text">Фильтр</span>
+                  </label>
+                  <label class="catalog-tab__label">
+                    <input class="catalog-tab__input visually-hidden" type="radio" name="catalog-tab" value="sort" data-btn-tab="tab-sort"><span class="catalog-tab__text">Сортировка</span>
+                  </label>
+                </div>
                 <form class="catalog-top-btns" action="#" data-item-tab="tab-sort" id="tab-sort">
                   <label class="catalog-top__btn">
                     <input type="radio" name="sort" value="Сначала дороже"><span>Сначала дороже</span>

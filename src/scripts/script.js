@@ -250,13 +250,6 @@ if (document.querySelectorAll('[data-btn-tab')){
 
   for (const button of buttons) {
     button.addEventListener('click', (event) => {
-      event.preventDefault();
-      
-      button.addEventListener('change', function(){
-        button.classList.remove('active');
-        button.classList.add('active');
-      });
-      
       for (const item of items) {
         item.classList.remove('active');
       };
@@ -266,17 +259,3 @@ if (document.querySelectorAll('[data-btn-tab')){
 }
   
 /*Filter or sort end*/
-
-// for (const tabs of document.querySelectorAll("[data-tab]")) {
-//   const buttons = tabs.querySelectorAll("[data-buttn-tab]");
-//   const items = tabs.querySelectorAll("[data-item-tab]");
-
-//   for (const button of buttons) {
-//     button.addEventListener("change", (event) => {
-//       for (const item of items) {
-//         item.style.display = "none";
-//       }
-//       tabs.querySelector(`[data-item-tab=${event.target.dataset.buttnTab}]`).style.display = "block";
-//     });
-//   }
-// }
