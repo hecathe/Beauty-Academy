@@ -251,6 +251,12 @@ if (document.querySelectorAll('[data-btn-tab')){
   for (const button of buttons) {
     button.addEventListener('click', (event) => {
       event.preventDefault();
+      
+      button.addEventListener('change', function(){
+        button.classList.remove('active');
+        button.classList.add('active');
+      });
+      
       for (const item of items) {
         item.classList.remove('active');
       };
