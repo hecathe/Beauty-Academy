@@ -60,30 +60,31 @@ block content
                   <path d="M16 1L1 16M1 1L16 16" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-        .cart__info.cart-info
-            h4.cart-info__title Ваш заказ
-            form(action="#" method="get").cart-info__form
-              input.cart-info__input(type="text" placeholder="Введите промокод" data-required)
-              button.cart-info__btn(type="submit") Применить
-            ul.cart-info__list
-              li.cart-info__item
-                p.cart-info__col Количество
-                span.cart-info__col 2 шт.
-              li.cart-info__item
-                p.cart-info__col Стоимость
-                span.cart-info__col.cart-info__col--bold 9 800 ₽
-              li.cart-info__item
-                p.cart-info__col Промокод
-                span.cart-info__col.cart-info__col--sale – 1 000 ₽
-              li.cart-info__item
-                p.cart-info__col Доставка
-                span.cart-info__col 0 ₽
-            ul.cart-info__total
-              li.cart-info__item
-                p.cart-info__col Итого
-                span.cart-info__col.cart-info__col--bold 8 800 ₽
-              li.cart-info__item
-                a.cart-info__link.btn-background(href="#") Перейти к оформлению
+        .ordering__wrap
+          .cart__info.cart-info
+              h4.cart-info__title Ваш заказ
+              form(action="#" method="get").cart-info__form
+                input.cart-info__input(type="text" placeholder="Введите промокод" data-required)
+                button.cart-info__btn(type="submit") Применить
+              ul.cart-info__list
+                li.cart-info__item
+                  p.cart-info__col Количество
+                  span.cart-info__col 2 шт.
+                li.cart-info__item
+                  p.cart-info__col Стоимость
+                  span.cart-info__col.cart-info__col--bold 9 800 ₽
+                li.cart-info__item
+                  p.cart-info__col Промокод
+                  span.cart-info__col.cart-info__col--sale – 1 000 ₽
+                li.cart-info__item
+                  p.cart-info__col Доставка
+                  span.cart-info__col 0 ₽
+              ul.cart-info__total
+                li.cart-info__item
+                  p.cart-info__col Итого
+                  span.cart-info__col.cart-info__col--bold 8 800 ₽
+                li.cart-info__item
+                  a.cart-info__link.btn-background(href="#") Перейти к оформлению
 
       section.cards.margin-block.slider4
         .cards-top

@@ -7,6 +7,8 @@
     }
 }
 .ordering__wrap {
+    position: sticky;
+    top: 150px;
     width: 452px;
     margin-left: 24px;
     .cart-info {
